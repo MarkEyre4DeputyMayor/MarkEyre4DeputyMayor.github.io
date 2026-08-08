@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priorities | Mark Eyre for Deputy Mayor</title>
+  <meta name="description" content="Mark Eyre's priorities for Strathroy-Caradoc: accountable government, responsible planning, agriculture, taxpayer value, and infrastructure.">
+
+  <style>
+    :root {
+      --navy: #12304a;
+      --blue: #1f5f86;
+      --gold: #d9a63a;
+      --cream: #f7f4ed;
+      --ink: #1d2730;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1.05;
+      font-size: 1.15rem;
+      letter-spacing: .02em;
+    }
+
+    .brand span {
+      display: block;
+      color: #dce9f1;
+      font-size: .73rem;
+      font-weight: 600;
+      margin-top: 5px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 17px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    nav a:hover,
+    nav a.active { color: #f5cf75; }
+
+    .hero {
+      color: var(--white);
+      background: linear-gradient(135deg, #1c4a6a, #12304a);
+      padding: 72px 0;
+    }
+
+    .eyebrow {
+      color: #f5cf75;
+      text-transform: uppercase;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      margin: 0 0 14px;
+    }
+
+    h1, h2, h3 { line-height: 1.15; }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      letter-spacing: -.045em;
+    }
+
+    .hero p:last-child {
+      max-width: 790px;
+      margin: 20px 0 0;
+      color: #dce9f1;
+      font-size: 1.15rem;
+    }
+
+    section { padding: 68px 0; }
+
+    .intro {
+      max-width: 800px;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .priority-list {
+      display: grid;
+      gap: 25px;
+      margin-top: 38px;
+    }
+
+    .priority {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 28px;
+      padding: 32px;
+      background: var(--cream);
+      border-left: 7px solid var(--gold);
+    }
+
+    .number {
+      color: var(--blue);
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .priority h2 {
+      color: var(--navy);
+      margin: 0 0 16px;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+
+    .priority ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .priority li { margin-bottom: 11px; }
+
+    .closing {
+      text-align: center;
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .closing h2 {
+      max-width: 860px;
+      margin: 0 auto 18px;
+      color: var(--white);
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+    }
+
+    .closing p {
+      max-width: 780px;
+      margin: 0 auto;
+      color: #dce9f1;
+      font-size: 1.08rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 26px;
+      padding: 13px 21px;
+      color: #182633;
+      background: var(--gold);
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button:hover { background: #efc15b; }
+
+    footer {
+      background: #0b1f30;
+      color: #dce9f1;
+      padding: 30px 0;
+      font-size: .9rem;
+    }
+
+    footer p { margin: 6px 0; }
+
+    @media (max-width: 760px) {
+      .nav {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .priority {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 25px;
+      }
+
+      section { padding: 52px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        MARK EYRE
+        <span>For Deputy Mayor</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Mark</a>
+        <a class="active" href="priorities.html">Priorities</a>
+        <a href="index.html#involved">Get Involved</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Mark Eyre's Priorities</p>
+        <h1>Practical leadership for Strathroy-Caradoc.</h1>
+        <p>
+          Mark’s priorities are grounded in responsible local government,
+          fair process, long-term thinking, and respect for the people who
+          call Strathroy-Caradoc home.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="intro">
+          The Deputy Mayor must be prepared to study the material, listen to
+          residents, understand the municipality’s responsibilities, and make
+          decisions based on evidence and the public interest.
+        </p>
+
+        <div class="priority-list">
+
+          <article class="priority">
+            <div class="number">01</div>
+            <div>
+              <h2>Transparent and accountable government</h2>
+              <ul>
+                <li>Council decisions should be open, well explained, and based on the public record.</li>
+                <li>Residents deserve meaningful opportunities to be heard, without unnecessary procedural barriers.</li>
+                <li>Council members should come to meetings prepared, listen to evidence, and explain their decisions clearly.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="priority">
+            <div class="number">02</div>
+            <div>
+              <h2>Responsible planning and land-use decisions</h2>
+              <ul>
+                <li>Major land-use decisions must follow planning rules, official-plan policy, and evidence—not predetermined outcomes or political pressure.</li>
+                <li>Growth should be carefully planned to protect the character, services, infrastructure, and long-term interests of the municipality.</li>
+                <li>Residents affected by planning proposals deserve clear information, fair process, and respectful consideration.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="priority">
+            <div class="number">03</div>
+            <div>
+              <h2>Protecting agriculture and rural interests</h2>
+              <ul>
+                <li>Agricultural land and rural communities are essential to Strathroy-Caradoc’s identity, economy, and future.</li>
+                <li>Council must understand the real-world impacts that development, traffic, servicing, drainage, and land-use changes can have on farms and rural residents.</li>
+                <li>Rural voices should carry equal weight in municipal decision-making.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="priority">
+            <div class="number">04</div>
+            <div>
+              <h2>Financial responsibility and value for taxpayers</h2>
+              <ul>
+                <li>Every municipal dollar should be spent carefully, transparently, and with clear public value.</li>
+                <li>Procurement, tendering, and purchasing practices should be strong enough to protect taxpayers and prevent avoidable costs.</li>
+                <li>Council must understand both immediate costs and long-term operating, maintenance, debt, and infrastructure obligations.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="priority">
+            <div class="number">05</div>
+            <div>
+              <h2>Infrastructure and municipal capacity</h2>
+              <ul>
+                <li>Reliable water, wastewater, roads, drainage, and other core services must be planned before growth outpaces municipal capacity.</li>
+                <li>Mark will bring an engineer’s discipline to reviewing infrastructure needs, risks, costs, and options.</li>
+                <li>The municipality should make practical, evidence-based investments that protect existing residents while preparing responsibly for the future.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container">
+        <h2>Leadership that is prepared, independent, and focused on the long term.</h2>
+        <p>
+          Mark Eyre is running for Deputy Mayor because Strathroy-Caradoc needs
+          leadership that reads the material, respects the rules, asks difficult
+          questions, and puts sound long-term decisions ahead of political convenience.
+        </p>
+
+        <a class="button" href="index.html#involved">Get Involved</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Mark Eyre for Deputy Mayor</strong> | Strathroy-Caradoc</p>
+      <p>Authorized by the Mark Eyre campaign.</p>
+    </div>
+  </footer>
+</body>
+</html>
