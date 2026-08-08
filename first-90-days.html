@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First 90 Days | Mark Eyre for Deputy Mayor</title>
+  <meta name="description" content="Mark Eyre's practical first 90 days agenda for Strathroy-Caradoc.">
+
+  <style>
+    :root {
+      --navy: #12304a;
+      --blue: #1f5f86;
+      --gold: #d9a63a;
+      --cream: #f7f4ed;
+      --ink: #1d2730;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1.05;
+      font-size: 1.15rem;
+      letter-spacing: .02em;
+    }
+
+    .brand span {
+      display: block;
+      color: #dce9f1;
+      font-size: .73rem;
+      font-weight: 600;
+      margin-top: 5px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 17px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #f5cf75;
+    }
+
+    .hero {
+      color: var(--white);
+      background: linear-gradient(135deg, #1c4a6a, #12304a);
+      padding: 72px 0;
+    }
+
+    .eyebrow {
+      color: #f5cf75;
+      text-transform: uppercase;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      margin: 0 0 14px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      letter-spacing: -.045em;
+    }
+
+    .hero p:last-child {
+      max-width: 790px;
+      margin: 20px 0 0;
+      color: #dce9f1;
+      font-size: 1.15rem;
+    }
+
+    section {
+      padding: 68px 0;
+    }
+
+    .intro {
+      max-width: 840px;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .action-list {
+      display: grid;
+      gap: 25px;
+      margin-top: 38px;
+    }
+
+    .action {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 28px;
+      padding: 32px;
+      background: var(--cream);
+      border-left: 7px solid var(--gold);
+    }
+
+    .number {
+      color: var(--blue);
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .action h2 {
+      color: var(--navy);
+      margin: 0 0 15px;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+
+    .action h3 {
+      margin: 22px 0 8px;
+      color: var(--blue);
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .action p {
+      margin: 0 0 13px;
+    }
+
+    .action ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .action li {
+      margin-bottom: 9px;
+    }
+
+    .deliverable {
+      margin-top: 22px !important;
+      padding: 16px 18px;
+      color: var(--navy);
+      background: var(--white);
+      border-left: 4px solid var(--blue);
+    }
+
+    .deliverable strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--blue);
+      text-transform: uppercase;
+      font-size: .82rem;
+      letter-spacing: .06em;
+    }
+
+    .closing {
+      text-align: center;
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .closing h2 {
+      max-width: 850px;
+      margin: 0 auto 18px;
+      color: var(--white);
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+    }
+
+    .closing p {
+      max-width: 780px;
+      margin: 0 auto;
+      color: #dce9f1;
+      font-size: 1.08rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 26px;
+      padding: 13px 21px;
+      color: #182633;
+      background: var(--gold);
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button:hover {
+      background: #efc15b;
+    }
+
+    footer {
+      background: #0b1f30;
+      color: #dce9f1;
+      padding: 30px 0;
+      font-size: .9rem;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .action {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 25px;
+      }
+
+      section {
+        padding: 52px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        MARK EYRE
+        <span>For Deputy Mayor</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Mark</a>
+        <a href="priorities.html">Priorities</a>
+        <a class="active" href="first-90-days.html">First 90 Days</a>
+        <a href="index.html#involved">Get Involved</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">My First 90 Days</p>
+        <h1>Prepared leadership. Clear questions. Practical action.</h1>
+        <p>
+          If elected, Mark will use his first 90 days to become fully briefed
+          on the municipality’s major files, ask informed questions, and bring
+          forward practical proposals to Council where collective action is needed.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="intro">
+          Mark’s focus will be transparency, responsible growth, taxpayer
+          protection, and sound long-term infrastructure planning for
+          Strathroy-Caradoc.
+        </p>
+
+        <div class="action-list">
+
+          <article class="action">
+            <div class="number">01</div>
+            <div>
+              <h2>Get fully briefed on the major files</h2>
+              <p>
+                Seek briefings through appropriate municipal channels with the
+                Mayor, CAO, senior staff, and department heads on:
+              </p>
+
+              <ul>
+                <li>Water and wastewater capacity and planned upgrades.</li>
+                <li>Current capital projects, debt, reserves, and budget pressures.</li>
+                <li>Major planning applications, appeals, legal matters, and key deadlines.</li>
+                <li>Roads, drainage, recreation, public safety, and service-delivery pressures.</li>
+              </ul>
+
+              <p class="deliverable">
+                <strong>Deliverable</strong>
+                A clear understanding of the municipality’s highest risks,
+                upcoming decisions, financial commitments, and areas requiring
+                early Council attention.
+              </p>
+            </div>
+          </article>
+
+          <article class="action">
+            <div class="number">02</div>
+            <div>
+              <h2>Seek clearer Council accountability</h2>
+              <p>
+                Ask Council to consider a regular, public, plain-language report
+                identifying:
+              </p>
+
+              <ul>
+                <li>Major projects and their status.</li>
+                <li>Key decisions expected in the next 60 to 90 days.</li>
+                <li>Budget changes, cost pressures, and project risks.</li>
+                <li>Important planning, servicing, and infrastructure constraints.</li>
+              </ul>
+
+              <p class="deliverable">
+                <strong>Deliverable</strong>
+                Residents should be able to see what Council is working on,
+                what is changing, and where questions need to be asked early.
+              </p>
+            </div>
+          </article>
+
+          <article class="action">
+            <div class="number">03</div>
+            <div>
+              <h2>Review growth and infrastructure together</h2>
+              <p>
+                Ask Council to receive a clear review of whether water,
+                wastewater, roads, drainage, and other municipal services are
+                keeping pace with planned growth.
+              </p>
+
+              <p class="deliverable">
+                <strong>Deliverable</strong>
+                Growth decisions should be linked to real servicing capacity,
+                capital costs, practical alternatives, and a credible long-term
+                plan—not treated as isolated planning decisions.
+              </p>
+            </div>
+          </article>
+
+          <article class="action">
+            <div class="number">04</div>
+            <div>
+              <h2>Strengthen taxpayer protection in procurement and spending</h2>
+              <p>
+                Review the municipality’s procurement policy, tender thresholds,
+                exceptions, and reporting to Council on significant purchases.
+                Where improvements are warranted, ask Council to consider clearer
+                oversight and reporting requirements.
+              </p>
+
+              <p class="deliverable">
+                <strong>Deliverable</strong>
+                A proposal for stronger oversight of significant spending,
+                including documented reasons and transparent reporting whenever
+                competitive tendering is not used.
+              </p>
+            </div>
+          </article>
+
+          <article class="action">
+            <div class="number">05</div>
+            <div>
+              <h2>Work toward practical dispute resolution</h2>
+              <p>
+                Seek an early briefing, through appropriate channels, on active
+                municipal disputes, litigation, and inter-municipal issues,
+                including costs, risks, and lawful paths toward resolution.
+              </p>
+
+              <p class="deliverable">
+                <strong>Deliverable</strong>
+                A public-interest approach focused on fairness, openness where
+                legally possible, sound decision-making, and reducing avoidable
+                legal costs to taxpayers.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container">
+        <h2>First-day preparation. Long-term responsibility.</h2>
+        <p>
+          Mark’s first 90 days will focus on understanding the facts, identifying
+          risks early, improving public accountability, and helping Council make
+          sound decisions for Strathroy-Caradoc’s future.
+        </p>
+
+        <a class="button" href="priorities.html">View Mark’s Priorities</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Mark Eyre for Deputy Mayor</strong> | Strathroy-Caradoc</p>
+      <p>Authorized by the Mark Eyre campaign.</p>
+    </div>
+  </footer>
+</body>
+</html>
