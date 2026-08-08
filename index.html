@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark Eyre for Deputy Mayor | Strathroy-Caradoc</title>
+  <meta name="description" content="Mark Eyre for Deputy Mayor of Strathroy-Caradoc.">
+  <style>
+    :root {
+      --navy: #12304a;
+      --blue: #1f5f86;
+      --gold: #d9a63a;
+      --cream: #f7f4ed;
+      --ink: #1d2730;
+      --white: #ffffff;
+      --line: #d8dde1;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1.05;
+      font-size: 1.15rem;
+      letter-spacing: .02em;
+    }
+
+    .brand span {
+      display: block;
+      color: #dce9f1;
+      font-size: .73rem;
+      font-weight: 600;
+      margin-top: 5px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 17px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    nav a:hover { color: #f5cf75; }
+
+    .button {
+      display: inline-block;
+      border: 2px solid transparent;
+      border-radius: 3px;
+      padding: 12px 20px;
+      font-weight: 800;
+      text-decoration: none;
+      text-align: center;
+      transition: .2s ease;
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: #182633;
+    }
+
+    .button-gold:hover {
+      background: #efc15b;
+      transform: translateY(-1px);
+    }
+
+    .button-outline {
+      color: var(--white);
+      border-color: var(--white);
+    }
+
+    .button-outline:hover {
+      color: var(--navy);
+      background: var(--white);
+    }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(18, 48, 74, .96), rgba(18, 48, 74, .78)),
+        linear-gradient(135deg, #315f7f, #18364e);
+      color: var(--white);
+      padding: 100px 0 92px;
+    }
+
+    .hero-content { max-width: 760px; }
+
+    .eyebrow {
+      color: #f5cf75;
+      text-transform: uppercase;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      margin: 0 0 15px;
+    }
+
+    h1, h2, h3 { line-height: 1.15; }
+
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 5.4rem);
+      margin: 0;
+      letter-spacing: -.045em;
+    }
+
+    .hero h2 {
+      color: #dce9f1;
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      font-weight: 500;
+      margin: 15px 0 24px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      font-size: 1.13rem;
+      margin: 0 0 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    section { padding: 72px 0; }
+
+    .section-label {
+      color: var(--blue);
+      margin: 0 0 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: .8rem;
+      letter-spacing: .1em;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 18px;
+      letter-spacing: -.03em;
+    }
+
+    .intro {
+      max-width: 790px;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .priorities { background: var(--cream); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: var(--white);
+      border-top: 5px solid var(--gold);
+      padding: 26px;
+      box-shadow: 0 5px 16px rgba(20, 38, 52, .08);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin: 0 0 11px;
+      font-size: 1.28rem;
+    }
+
+    .card p { margin: 0; }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .photo-placeholder {
+      min-height: 310px;
+      background: linear-gradient(135deg, #dbe7ed, #b8ccd9);
+      border: 10px solid var(--white);
+      box-shadow: 0 6px 20px rgba(20, 38, 52, .14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      text-align: center;
+      padding: 25px;
+      font-weight: 800;
+    }
+
+    .involved {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .involved h2 { color: var(--white); }
+
+    .involved p {
+      max-width: 720px;
+      margin: 0 auto 27px;
+      color: #dce9f1;
+      font-size: 1.08rem;
+    }
+
+    .involved-actions {
+      display: flex;
+      justify-content: center;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      background: #0b1f30;
+      color: #dce9f1;
+      padding: 30px 0;
+      font-size: .9rem;
+    }
+
+    footer p { margin: 6px 0; }
+
+    @media (max-width: 760px) {
+      .nav {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav { justify-content: flex-start; gap: 12px; }
+
+      .hero { padding: 72px 0; }
+
+      .grid, .about { grid-template-columns: 1fr; }
+
+      .about { gap: 28px; }
+
+      section { padding: 56px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        MARK EYRE
+        <span>For Deputy Mayor</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About Mark</a>
+        <a href="#priorities">Priorities</a>
+        <a href="#involved">Get Involved</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Strathroy-Caradoc • 2026</p>
+        <h1>Mark Eyre<br>for Deputy Mayor</h1>
+        <h2>Working for a strong, accountable Strathroy-Caradoc.</h2>
+        <p>
+          A campaign website for voters who want clear information, respectful
+          leadership, and a practical focus on the issues that matter locally.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#priorities">View Priorities</a>
+          <a class="button button-outline" href="#involved">Get Involved</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about">
+        <div>
+          <p class="section-label">About Mark</p>
+          <h2>A local campaign built on listening and accountability.</h2>
+          <p class="intro">
+            This section will introduce your background, your connection to
+            Strathroy-Caradoc, and why you are seeking the office of Deputy Mayor.
+            We will replace this placeholder with your approved biography.
+          </p>
+        </div>
+
+        <div class="photo-placeholder">
+          Your campaign photograph will go here
+        </div>
+      </div>
+    </section>
+
+    <section class="priorities" id="priorities">
+      <div class="container">
+        <p class="section-label">Priorities</p>
+        <h2>Focused on the issues that matter.</h2>
+        <p class="intro">
+          These are placeholders. We will replace them with your own specific,
+          carefully worded campaign priorities and link each one to a detailed page.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Accountable Government</h3>
+            <p>Clear decisions, responsible stewardship of public funds, and meaningful public engagement.</p>
+          </article>
+
+          <article class="card">
+            <h3>Responsible Growth</h3>
+            <p>Thoughtful planning that respects communities, infrastructure, and the municipality’s long-term future.</p>
+          </article>
+
+          <article class="card">
+            <h3>Strong Communities</h3>
+            <p>Practical attention to the services, roads, recreation, safety, and local quality of life residents rely on.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="involved" id="involved">
+      <div class="container">
+        <p class="section-label">Join the Campaign</p>
+        <h2>Stay informed. Get involved.</h2>
+        <p>
+          Volunteer, request a lawn sign, receive campaign updates, or send a question.
+          These buttons will be connected to dedicated campaign forms next.
+        </p>
+
+        <div class="involved-actions">
+          <a class="button button-gold" href="#">Volunteer</a>
+          <a class="button button-outline" href="#">Request a Lawn Sign</a>
+          <a class="button button-outline" href="#">Contact Mark</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Mark Eyre for Deputy Mayor</strong> | Strathroy-Caradoc</p>
+      <p>Authorized by the Mark Eyre campaign.</p>
+    </div>
+  </footer>
+</body>
+</html>
