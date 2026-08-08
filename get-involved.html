@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved | Mark Eyre for Deputy Mayor</title>
+  <meta name="description" content="Volunteer or request a lawn sign to support Mark Eyre for Deputy Mayor of Strathroy-Caradoc.">
+
+  <style>
+    :root {
+      --navy: #12304a;
+      --blue: #1f5f86;
+      --gold: #d9a63a;
+      --cream: #f7f4ed;
+      --ink: #1d2730;
+      --white: #ffffff;
+      --line: #d7dfe4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1.05;
+      font-size: 1.15rem;
+      letter-spacing: .02em;
+    }
+
+    .brand span {
+      display: block;
+      color: #dce9f1;
+      font-size: .73rem;
+      font-weight: 600;
+      margin-top: 5px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 17px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #f5cf75;
+    }
+
+    .hero {
+      color: var(--white);
+      background: linear-gradient(135deg, #1c4a6a, #12304a);
+      padding: 72px 0;
+    }
+
+    .eyebrow {
+      color: #f5cf75;
+      text-transform: uppercase;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      margin: 0 0 14px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      letter-spacing: -.045em;
+    }
+
+    .hero p:last-child {
+      max-width: 740px;
+      margin: 20px 0 0;
+      color: #dce9f1;
+      font-size: 1.15rem;
+    }
+
+    section {
+      padding: 68px 0;
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 38px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-height: 310px;
+      padding: 30px;
+      background: var(--cream);
+      border-top: 6px solid var(--gold);
+      box-shadow: 0 4px 14px rgba(20, 38, 52, .08);
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 1.8rem;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 1.03rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: auto;
+      padding: 13px 20px;
+      color: #182633;
+      background: var(--gold);
+      border-radius: 3px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button:hover {
+      background: #efc15b;
+    }
+
+    .notice {
+      margin-top: 42px;
+      padding: 26px 30px;
+      color: var(--navy);
+      background: #e7f0f4;
+      border-left: 6px solid var(--blue);
+    }
+
+    .notice h2 {
+      margin: 0 0 10px;
+      font-size: 1.45rem;
+    }
+
+    .notice p {
+      margin: 0;
+    }
+
+    .privacy {
+      padding-top: 0;
+      padding-bottom: 68px;
+    }
+
+    .privacy p {
+      max-width: 900px;
+      margin: 0;
+      color: #4e5c67;
+      font-size: .92rem;
+    }
+
+    footer {
+      background: #0b1f30;
+      color: #dce9f1;
+      padding: 30px 0;
+      font-size: .9rem;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 52px 0;
+      }
+
+      .privacy {
+        padding-bottom: 52px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        MARK EYRE
+        <span>For Deputy Mayor</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Mark</a>
+        <a href="priorities.html">Priorities</a>
+        <a href="first-90-days.html">First 90 Days</a>
+        <a class="active" href="get-involved.html">Get Involved</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Join the Campaign</p>
+        <h1>Help build a stronger Strathroy-Caradoc.</h1>
+        <p>
+          There are practical ways to support Mark Eyre for Deputy Mayor.
+          Volunteer your time or request a campaign lawn sign today.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="intro">
+          Every conversation, sign, and volunteer contribution helps the campaign
+          reach more residents with a message of prepared, independent, and
+          accountable leadership.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h2>Volunteer</h2>
+            <p>
+              Help in a way that works for you: canvassing, phone calls, sign
+              delivery, event support, administrative help, or social-media sharing.
+              No previous campaign experience is required.
+            </p>
+
+            <a class="button"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSfyVCC2gWn2yceaE2nHuTEjb9pPjlc23kTy4_xCjjlWBC5xUA/viewform"
+               target="_blank"
+               rel="noopener">
+              Volunteer for the Campaign
+            </a>
+          </article>
+
+          <article class="card">
+            <h2>Request a Lawn Sign</h2>
+            <p>
+              A lawn sign is a visible way to show your support for prepared,
+              independent, and accountable leadership in Strathroy-Caradoc.
+              Request a lawn sign, window sign, or either option.
+            </p>
+
+            <a class="button"
+               href="https://docs.google.com/forms/d/e/1FAIpQLScRNl8cobQZPD6S29RXWQNQYnEgzTdkuKFcXTnAX_IBLHbFuw/viewform"
+               target="_blank"
+               rel="noopener">
+              Request a Lawn Sign
+            </a>
+          </article>
+        </div>
+
+        <div class="notice">
+          <h2>More ways to participate</h2>
+          <p>
+            Campaign updates, pledge support, contact information, events, and
+            donation information will be added as the campaign continues.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy">
+      <div class="container">
+        <p>
+          Information submitted through campaign forms is used by the Mark Eyre
+          campaign to respond to requests, organize campaign activity, and send
+          updates only where permission has been provided. Information will not
+          be sold or shared outside the campaign except where required by law.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Mark Eyre for Deputy Mayor</strong> | Strathroy-Caradoc</p>
+      <p>Authorized by the Mark Eyre campaign.</p>
+    </div>
+  </footer>
+</body>
+</html>
