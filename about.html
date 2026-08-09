@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Mark Eyre | Mark Eyre for Deputy Mayor</title>
-  <meta name="description" content="Learn about Mark Eyre, candidate for Deputy Mayor of Strathroy-Caradoc.">
+
+  <title>About Mark | Mark Eyre for Deputy Mayor</title>
+
+  <meta
+    name="description"
+    content="Learn about Mark Eyre, candidate for Deputy Mayor of Strathroy-Caradoc."
+  >
 
   <style>
     :root {
@@ -14,6 +19,7 @@
       --cream: #f7f4ed;
       --ink: #1d2730;
       --white: #ffffff;
+      --light-blue: #dce9f1;
     }
 
     * {
@@ -25,18 +31,18 @@
       color: var(--ink);
       background: var(--white);
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     .container {
-      width: min(1080px, 92%);
+      width: min(1050px, 92%);
       margin: 0 auto;
     }
 
     header {
-      background: var(--navy);
       color: var(--white);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+      background: var(--navy);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     }
 
     .nav {
@@ -50,19 +56,19 @@
     .brand {
       color: var(--white);
       text-decoration: none;
+      font-size: 1.15rem;
       font-weight: 800;
       line-height: 1.05;
-      font-size: 1.15rem;
-      letter-spacing: .02em;
+      letter-spacing: 0.02em;
     }
 
     .brand span {
       display: block;
-      color: #dce9f1;
-      font-size: .73rem;
-      font-weight: 600;
       margin-top: 5px;
-      letter-spacing: .06em;
+      color: var(--light-blue);
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
@@ -77,7 +83,7 @@
     nav a {
       color: var(--white);
       text-decoration: none;
-      font-size: .9rem;
+      font-size: 0.9rem;
       font-weight: 700;
     }
 
@@ -87,92 +93,132 @@
     }
 
     .hero {
+      padding: 74px 0;
       color: var(--white);
       background: linear-gradient(135deg, #1c4a6a, #12304a);
-      padding: 72px 0;
     }
 
     .eyebrow {
-      color: #f5cf75;
-      text-transform: uppercase;
-      font-size: .82rem;
-      font-weight: 800;
-      letter-spacing: .12em;
       margin: 0 0 14px;
+      color: #f5cf75;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
-    h1, h2 {
+    h1,
+    h2,
+    h3 {
       line-height: 1.15;
     }
 
     h1 {
+      max-width: 850px;
       margin: 0;
-      font-size: clamp(2.6rem, 6vw, 4.8rem);
-      letter-spacing: -.045em;
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      letter-spacing: -0.045em;
     }
 
     .hero p:last-child {
       max-width: 760px;
-      margin: 20px 0 0;
-      color: #dce9f1;
+      margin: 21px 0 0;
+      color: var(--light-blue);
       font-size: 1.15rem;
     }
 
     section {
-      padding: 66px 0;
+      padding: 70px 0;
     }
 
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
+    .bio-layout {
+      display: grid;
+      grid-template-columns: 1fr 330px;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .bio h2 {
+      margin: 0 0 22px;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .bio p {
+      margin: 0 0 22px;
+      font-size: 1.06rem;
+    }
+
+    .qualification-box {
+      padding: 31px;
+      color: var(--white);
+      background: var(--blue);
+      border-top: 7px solid var(--gold);
+    }
+
+    .qualification-box h2 {
+      margin: 0 0 19px;
+      color: var(--white);
+      font-size: 1.65rem;
+    }
+
+    .qualification-box ul {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .qualification-box li {
+      margin-bottom: 13px;
+      color: #edf5f9;
+    }
+
+    .focus {
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .focus h2 {
+      max-width: 760px;
+      margin: 0 auto 18px;
+      color: var(--white);
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .focus-intro {
+      max-width: 780px;
+      margin: 0 auto 36px;
+      color: var(--light-blue);
+      text-align: center;
       font-size: 1.08rem;
     }
 
-    .content p {
-      margin: 0 0 22px;
-    }
-
-    .credentials {
+    .focus-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin: 34px 0 40px;
+      gap: 21px;
     }
 
-    .credential {
-      padding: 22px;
-      color: var(--navy);
-      background: var(--cream);
-      border-top: 5px solid var(--gold);
-      text-align: center;
-      font-weight: 800;
-    }
-
-    .credential span {
-      display: block;
-      margin-top: 4px;
+    .focus-card {
+      padding: 26px;
       color: var(--ink);
-      font-size: .86rem;
-      font-weight: 600;
+      background: var(--white);
+      border-left: 5px solid var(--gold);
     }
 
-    .quote-section {
-      background: var(--cream);
-      text-align: center;
+    .focus-card h3 {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 1.3rem;
     }
 
-    blockquote {
-      max-width: 850px;
-      margin: 0 auto;
-      color: var(--navy);
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-weight: 700;
-      line-height: 1.35;
+    .focus-card p {
+      margin: 0;
     }
 
     .button {
       display: inline-block;
-      margin-top: 24px;
+      margin-top: 29px;
       padding: 13px 21px;
       color: #182633;
       background: var(--gold);
@@ -185,15 +231,44 @@
       background: #efc15b;
     }
 
+    .next-step {
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .next-step h2 {
+      max-width: 760px;
+      margin: 0 auto 16px;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .next-step p {
+      max-width: 730px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+    }
+
     footer {
-      background: #0b1f30;
-      color: #dce9f1;
       padding: 30px 0;
-      font-size: .9rem;
+      color: var(--light-blue);
+      background: #0b1f30;
+      font-size: 0.9rem;
     }
 
     footer p {
       margin: 6px 0;
+    }
+
+    @media (max-width: 820px) {
+      .bio-layout,
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qualification-box {
+        max-width: 620px;
+      }
     }
 
     @media (max-width: 760px) {
@@ -208,12 +283,8 @@
         gap: 12px;
       }
 
-      .credentials {
-        grid-template-columns: 1fr;
-      }
-
       section {
-        padding: 52px 0;
+        padding: 53px 0;
       }
     }
   </style>
@@ -222,17 +293,17 @@
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="/index.html">
+      <a class="brand" href="index.html">
         MARK EYRE
         <span>For Deputy Mayor</span>
       </a>
 
       <nav aria-label="Main navigation">
-        <a href="/index.html">Home</a>
-        <a class="active" href="/about.html">About Mark</a>
-        <a href="/priorities.html">Priorities</a>
-        <a href="/first-90-days.html">First 90 Days</a>
-        <a href="/get-involved.html">Get Involved</a>
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About Mark</a>
+        <a href="priorities.html">Priorities</a>
+        <a href="first-90-days.html">First 90 Days</a>
+        <a href="get-involved.html">Get Involved</a>
       </nav>
     </div>
   </header>
@@ -240,80 +311,152 @@
   <main>
     <section class="hero">
       <div class="container">
-        <p class="eyebrow">About Mark Eyre</p>
-        <h1>Prepared. Independent. Accountable.</h1>
+        <p class="eyebrow">About Mark</p>
+
+        <h1>Practical experience. Independent judgment. Local commitment.</h1>
+
         <p>
-          Mark Eyre is seeking the office of Deputy Mayor to bring professional
-          experience, careful judgment, and a strong commitment to public service
-          to Strathroy-Caradoc.
+          Mark Eyre is running for Deputy Mayor to bring clear questions,
+          responsible planning, and respect for taxpayers to Strathroy-Caradoc
+          Council.
         </p>
       </div>
     </section>
 
     <section>
-      <div class="container content">
-        <div class="credentials">
-          <div class="credential">
-            Professional Engineer
-            <span>P.Eng.</span>
-          </div>
+      <div class="container bio-layout">
+        <div class="bio">
+          <h2>Experience that matters for municipal decisions.</h2>
 
-          <div class="credential">
-            Business Training
-            <span>MBA</span>
-          </div>
+          <p>
+            Mark Eyre is a retired Professional Engineer (P.Eng.) with an
+            Executive MBA from Bath Spa University, UK, and a Bachelor of
+            Engineering Science in Chemical and Biochemical Engineering from
+            Western University. He is bringing professional experience,
+            independent judgment, and the time to serve the community to his
+            candidacy for Deputy Mayor.
+          </p>
 
-          <div class="credential">
-            Farm Owner
-            <span>Walkers Drive</span>
-          </div>
+          <p>
+            Mark’s career includes engineering, water and wastewater projects,
+            infrastructure optimization, regulatory planning, business
+            leadership, consulting, and financial services. He worked for
+            Thames Water in the United Kingdom on the development of new water
+            and wastewater projects. He later worked with Trojan Technologies
+            in municipal water disinfection, wastewater and reuse, regulatory
+            planning, and improving the performance and useful life of existing
+            infrastructure.
+          </p>
+
+          <p>
+            His work has taken him across Canada, the United Kingdom, the
+            European Union, and parts of Eastern Europe. This experience gave
+            Mark a practical understanding of how technical, financial,
+            regulatory, and long-term planning decisions affect communities,
+            customers, and taxpayers.
+          </p>
+
+          <p>
+            Mark is a farm owner on Walkers Drive in Strathroy-Caradoc and has
+            a direct connection to the municipality’s agricultural, rural,
+            growth, and land-use issues. He has been actively involved in
+            municipal planning and governance matters, including reviewing
+            planning policy, official-plan and zoning processes, Council
+            procedure, and public-participation rules.
+          </p>
+
+          <p>
+            Mark has appeared before Council as a resident delegate and has
+            worked to ensure residents have a fair opportunity to be heard. He
+            believes residents deserve clear information, respectful treatment,
+            responsible growth, sound infrastructure planning, and careful
+            stewardship of their tax dollars.
+          </p>
+
+          <p>
+            Mark has also contributed to community life as a coach with
+            Strathroy-Caradoc Youth Hockey. While living in the United Kingdom,
+            he volunteered as a mentor with The Prince’s Trust—now known as The
+            King’s Trust—supporting young adults as they developed and launched
+            new businesses.
+          </p>
+
+          <p>
+            Mark returned to Canada in 2008 and moved to Strathroy in 2009. His
+            family already had longstanding ties to the community, with his
+            parents having lived in the area for more than 15 years before Mark
+            purchased his farm on Walkers Drive. He is running for Deputy Mayor
+            to bring practical experience, accountability, and a steady,
+            independent voice to Council.
+          </p>
         </div>
 
-        <p>
-          Mark Eyre is a retired professional engineer (P.Eng.) with an MBA.
-          At 64, Mark is bringing his professional experience, independent
-          judgment, and available time to public service.
-        </p>
+        <aside class="qualification-box">
+          <h2>Mark’s Background</h2>
 
-        <p>
-          His background combines engineering analysis, business training,
-          practical problem-solving, and a commitment to careful financial
-          decision-making.
-        </p>
-
-        <p>
-          Mark is a farm owner on Walkers Drive in Strathroy-Caradoc and has a
-          direct connection to the municipality’s agricultural, rural, and
-          land-use issues.
-        </p>
-
-        <p>
-          He has been actively involved in municipal planning and governance
-          matters, including reviewing planning policy, official-plan and zoning
-          processes, council procedure, and public participation rules.
-        </p>
-
-        <p>
-          Mark has appeared before Council as a resident delegate and has worked
-          to ensure residents receive a fair opportunity to be heard.
-        </p>
-
-        <p>
-          Mark has lived in, owned property in, and been connected to
-          Strathroy-Caradoc for <strong>[X years]</strong>.
-        </p>
+          <ul>
+            <li>Professional Engineer, licensed by Professional Engineers Ontario.</li>
+            <li>Executive MBA, Bath Spa University, UK.</li>
+            <li>Bachelor of Engineering Science, Western University.</li>
+            <li>Water, wastewater, infrastructure, and regulatory experience.</li>
+            <li>International experience in Canada, the UK, the EU, and Eastern Europe.</li>
+            <li>Farm owner on Walkers Drive.</li>
+            <li>Former Strathroy-Caradoc Youth Hockey coach.</li>
+            <li>Former business mentor with The Prince’s Trust, now The King’s Trust.</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section class="quote-section">
+    <section class="focus">
       <div class="container">
-        <blockquote>
-          “Strathroy-Caradoc needs prepared, independent leadership that reads
-          the material, respects the rules, asks difficult questions, and puts
-          sound long-term decisions ahead of political convenience.”
-        </blockquote>
+        <h2>What Mark will bring to Council.</h2>
 
-        <a class="button" href="/priorities.html">View Mark’s Priorities</a>
+        <p class="focus-intro">
+          Mark’s experience is directly relevant to the decisions that will
+          shape Strathroy-Caradoc’s future.
+        </p>
+
+        <div class="focus-grid">
+          <article class="focus-card">
+            <h3>Infrastructure Awareness</h3>
+            <p>
+              A practical understanding of water, wastewater, servicing
+              capacity, asset life, and the long-term consequences of
+              infrastructure decisions.
+            </p>
+          </article>
+
+          <article class="focus-card">
+            <h3>Financial Responsibility</h3>
+            <p>
+              Careful questions about project costs, procurement, growth,
+              budgets, and the financial impact of decisions on residents.
+            </p>
+          </article>
+
+          <article class="focus-card">
+            <h3>Open, Fair Process</h3>
+            <p>
+              A commitment to clear information, respectful public
+              participation, and making sure residents have a fair opportunity
+              to be heard.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-step">
+      <div class="container">
+        <h2>Learn more about Mark’s priorities.</h2>
+
+        <p>
+          Explore Mark’s practical approach to responsible growth, taxpayer
+          protection, transparency, and long-term infrastructure planning.
+        </p>
+
+        <a class="button" href="priorities.html">View Mark’s Priorities</a>
       </div>
     </section>
   </main>
