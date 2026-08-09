@@ -212,18 +212,20 @@
     .rate .label { background: var(--blue); }
     .unknown .label { background: var(--grey); }
 
-    .disclaimer {
-      grid-column: 1 / -1;
-      margin-top: 26px;
-      padding: 21px 24px;
-      color: var(--white);
-      background: var(--navy);
-      border-left: 7px solid var(--gold);
-    }
+ .disclaimer {
+  display: block;
+  max-width: 900px;
+  margin: 28px auto 0;
+  padding: 16px 22px;
+  color: var(--white);
+  background: var(--navy);
+  border-left: 7px solid var(--gold);
+  font-size: .94rem;
+}
 
-    .disclaimer p {
-      margin: 0;
-    }
+.disclaimer p {
+  margin: 0;
+}
 
     .legend {
       display: flex;
