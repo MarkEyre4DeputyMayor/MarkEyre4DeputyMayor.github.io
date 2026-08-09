@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Involved | Mark Eyre for Deputy Mayor</title>
-  <meta name="description" content="Volunteer or request a lawn sign to support Mark Eyre for Deputy Mayor of Strathroy-Caradoc.">
+  <meta name="description" content="Volunteer, request a lawn sign, or contact the Mark Eyre campaign for Deputy Mayor of Strathroy-Caradoc.">
 
   <style>
     :root {
@@ -14,7 +14,6 @@
       --cream: #f7f4ed;
       --ink: #1d2730;
       --white: #ffffff;
-      --line: #d7dfe4;
     }
 
     * {
@@ -102,7 +101,7 @@
       margin: 0 0 14px;
     }
 
-    h1, h2, h3 {
+    h1, h2 {
       line-height: 1.15;
     }
 
@@ -131,7 +130,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       margin-top: 38px;
     }
@@ -139,7 +138,7 @@
     .card {
       display: flex;
       flex-direction: column;
-      min-height: 310px;
+      min-height: 330px;
       padding: 30px;
       background: var(--cream);
       border-top: 6px solid var(--gold);
@@ -149,18 +148,18 @@
     .card h2 {
       margin: 0 0 14px;
       color: var(--navy);
-      font-size: 1.8rem;
+      font-size: 1.65rem;
     }
 
     .card p {
       margin: 0;
-      font-size: 1.03rem;
+      font-size: 1rem;
     }
 
     .button {
       display: inline-block;
       margin-top: auto;
-      padding: 13px 20px;
+      padding: 13px 18px;
       color: #182633;
       background: var(--gold);
       border-radius: 3px;
@@ -211,6 +210,12 @@
 
     footer p {
       margin: 6px 0;
+    }
+
+    @media (max-width: 950px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 760px) {
@@ -265,7 +270,7 @@
         <h1>Help build a stronger Strathroy-Caradoc.</h1>
         <p>
           There are practical ways to support Mark Eyre for Deputy Mayor.
-          Volunteer your time or request a campaign lawn sign today.
+          Volunteer your time, request a lawn sign, or contact the campaign.
         </p>
       </div>
     </section>
@@ -310,13 +315,29 @@
               Request a Lawn Sign
             </a>
           </article>
+
+          <article class="card">
+            <h2>Contact the Campaign</h2>
+            <p>
+              Send a question, policy comment, meeting invitation, media inquiry,
+              or other message to the Mark Eyre campaign. We welcome respectful
+              feedback from residents across Strathroy-Caradoc.
+            </p>
+
+            <a class="button"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSfompKWfnwR_mf_hAH0r9zfz55F982oj8Os97cWNlwUOIhl0Q/viewform"
+               target="_blank"
+               rel="noopener">
+              Contact the Campaign
+            </a>
+          </article>
         </div>
 
         <div class="notice">
           <h2>More ways to participate</h2>
           <p>
-            Campaign updates, pledge support, contact information, events, and
-            donation information will be added as the campaign continues.
+            Campaign updates, events, and donation information will be added as
+            the campaign continues.
           </p>
         </div>
       </div>
