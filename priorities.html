@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Priorities | Mark Eyre for Deputy Mayor</title>
   <meta name="description" content="Mark Eyre's priorities for Strathroy-Caradoc: accountable government, responsible planning, agriculture, taxpayer value, and infrastructure.">
 
@@ -21,7 +21,6 @@
     body {
       margin: 0;
       color: var(--ink);
-      background: var(--white);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.65;
     }
@@ -31,10 +30,11 @@
       margin: 0 auto;
     }
 
-    header {
+    header,
+    footer,
+    .closing {
       background: var(--navy);
       color: var(--white);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
     }
 
     .nav {
@@ -48,27 +48,22 @@
     .brand {
       color: var(--white);
       text-decoration: none;
+      font-size: 1.15rem;
       font-weight: 800;
       line-height: 1.05;
-      font-size: 1.15rem;
-      letter-spacing: .02em;
     }
 
     .brand span {
       display: block;
+      margin-top: 5px;
       color: #dce9f1;
       font-size: .73rem;
-      font-weight: 600;
-      margin-top: 5px;
-      letter-spacing: .06em;
       text-transform: uppercase;
     }
 
     nav {
       display: flex;
-      align-items: center;
       flex-wrap: wrap;
-      justify-content: flex-end;
       gap: 17px;
     }
 
@@ -85,21 +80,23 @@
     }
 
     .hero {
-      color: var(--white);
-      background: linear-gradient(135deg, #1c4a6a, #12304a);
       padding: 72px 0;
+      color: var(--white);
+      background: linear-gradient(135deg, #1c4a6a, var(--navy));
     }
 
     .eyebrow {
       color: #f5cf75;
-      text-transform: uppercase;
       font-size: .82rem;
       font-weight: 800;
       letter-spacing: .12em;
-      margin: 0 0 14px;
+      text-transform: uppercase;
     }
 
-    h1, h2 { line-height: 1.15; }
+    h1,
+    h2 {
+      line-height: 1.15;
+    }
 
     h1 {
       margin: 0;
@@ -109,18 +106,16 @@
 
     .hero p:last-child {
       max-width: 790px;
-      margin: 20px 0 0;
       color: #dce9f1;
       font-size: 1.15rem;
     }
 
     section {
-      padding: 68px 0;
+      padding: 65px 0;
     }
 
     .intro {
       max-width: 800px;
-      margin: 0;
       font-size: 1.1rem;
     }
 
@@ -137,6 +132,7 @@
       padding: 32px;
       background: var(--cream);
       border-left: 7px solid var(--gold);
+      scroll-margin-top: 24px;
     }
 
     .number {
@@ -147,8 +143,8 @@
     }
 
     .priority h2 {
-      color: var(--navy);
       margin: 0 0 16px;
+      color: var(--navy);
       font-size: clamp(1.6rem, 3vw, 2.2rem);
     }
 
@@ -161,16 +157,24 @@
       margin-bottom: 11px;
     }
 
+    .callout {
+      margin-top: 38px;
+      padding: 26px 30px;
+      background: #e7f0f5;
+      border-left: 7px solid var(--blue);
+    }
+
+    .callout h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+
     .closing {
       text-align: center;
-      color: var(--white);
-      background: var(--navy);
     }
 
     .closing h2 {
-      max-width: 860px;
       margin: 0 auto 18px;
-      color: var(--white);
       font-size: clamp(1.8rem, 4vw, 2.7rem);
     }
 
@@ -178,7 +182,6 @@
       max-width: 780px;
       margin: 0 auto;
       color: #dce9f1;
-      font-size: 1.08rem;
     }
 
     .button {
@@ -192,14 +195,9 @@
       font-weight: 800;
     }
 
-    .button:hover {
-      background: #efc15b;
-    }
-
     footer {
-      background: #0b1f30;
-      color: #dce9f1;
       padding: 30px 0;
+      color: #dce9f1;
       font-size: .9rem;
     }
 
@@ -215,7 +213,6 @@
       }
 
       nav {
-        justify-content: flex-start;
         gap: 12px;
       }
 
@@ -223,10 +220,6 @@
         grid-template-columns: 1fr;
         gap: 14px;
         padding: 25px;
-      }
-
-      section {
-        padding: 52px 0;
       }
     }
   </style>
@@ -243,7 +236,8 @@
       <nav aria-label="Main navigation">
         <a href="/index.html">Home</a>
         <a href="/about.html">About Mark</a>
-        <a class="active" href="/priorities.html">Priorities</a>
+        <a class="active" aria-current="page" href="/priorities.html">Priorities</a>
+        <a href="/elephant-in-the-room.html">The Issues</a>
         <a href="/first-90-days.html">First 90 Days</a>
         <a href="/get-involved.html">Contact Mark</a>
       </nav>
@@ -273,77 +267,91 @@
 
         <div class="priority-list">
 
-          <article class="priority">
+          <article class="priority" id="transparent-government">
             <div class="number">01</div>
             <div>
               <h2>Transparent and accountable government</h2>
               <ul>
                 <li>Council decisions should be open, well explained, and based on the public record.</li>
                 <li>Residents deserve meaningful opportunities to be heard, without unnecessary procedural barriers.</li>
-                <li>Council members should come to meetings prepared, listen to evidence, ask necessary questions, and explain their decisions clearly.</li>
-                <li>Where competing considerations arise, Council should show how it weighed the relevant evidence, public input, municipal responsibilities, and long-term consequences.</li>
+                <li>Council members should come prepared, listen to evidence, ask necessary questions, and explain their decisions clearly.</li>
+                <li>Council should show how it weighed evidence, public input, municipal responsibilities, and long-term consequences.</li>
+                <li>Major projects should have clear public reporting on cost, scope, financing, risks, and changes from the approved plan.</li>
               </ul>
             </div>
           </article>
 
-          <article class="priority">
+          <article class="priority" id="responsible-planning">
             <div class="number">02</div>
             <div>
               <h2>Responsible planning and land-use decisions</h2>
               <ul>
                 <li>Major land-use decisions must be grounded in planning rules, Official Plan policy, evidence, servicing capacity, and the long-term public interest—not predetermined outcomes or political pressure.</li>
-                <li>Council should consider final staff reports, public input, applicable legislation and planning policy, servicing information, and the full record before making a decision.</li>
-                <li>Where a decision involves competing considerations or a proposal that may depart from established policy, Council must carefully consider the legal framework, evidence, impacts, alternatives, and long-term consequences, and clearly explain its rationale.</li>
-                <li>Official Plan and zoning amendments, especially those involving agricultural or greenfield land, require careful scrutiny and fair process.</li>
+                <li>Council should consider staff reports, public input, applicable legislation, planning policy, servicing information, and the full record.</li>
+                <li>Official Plan and zoning amendments, especially involving agricultural or greenfield land, require careful scrutiny and fair process.</li>
                 <li>Residents affected by planning proposals deserve clear information, meaningful opportunity to participate, and respectful consideration.</li>
+                <li>Growth should proceed only where servicing, infrastructure capacity, and a fair financing plan have been demonstrated.</li>
               </ul>
             </div>
           </article>
 
-          <article class="priority">
+          <article class="priority" id="agriculture-rural">
             <div class="number">03</div>
             <div>
               <h2>Protecting agriculture and rural interests</h2>
               <ul>
                 <li>Agricultural land and rural communities are essential to Strathroy-Caradoc’s identity, economy, and future.</li>
-                <li>Council must understand the real-world impacts that development, traffic, servicing, drainage, and land-use changes can have on farms and rural residents.</li>
-                <li>Decisions affecting agricultural and rural areas should apply sound rural-planning principles, including Minimum Distance Separation requirements where applicable.</li>
-                <li>Where there are competing land-use, infrastructure, environmental, or growth considerations, Council must carefully assess the evidence and impacts on agricultural operations, rural residents, and the municipality’s long-term interests.</li>
+                <li>Council must understand development, traffic, servicing, drainage, and land-use impacts on farms and rural residents.</li>
+                <li>Decisions should apply sound rural-planning principles, including Minimum Distance Separation requirements where applicable.</li>
+                <li>Council must carefully assess evidence and impacts on agricultural operations, rural residents, and the municipality’s long-term interests.</li>
                 <li>Rural voices should carry equal weight in municipal decision-making.</li>
               </ul>
             </div>
           </article>
 
-          <article class="priority">
+          <article class="priority" id="financial-responsibility">
             <div class="number">04</div>
             <div>
               <h2>Financial responsibility and taxpayer protection</h2>
               <ul>
                 <li>Every municipal dollar should be spent carefully, transparently, and with clear public value.</li>
-                <li>Procurement, tendering, and purchasing practices must be strong enough to protect taxpayers and prevent avoidable costs.</li>
-                <li>Any exception to normal tendering or purchasing practice should receive careful scrutiny, a clear public explanation, and appropriate documentation.</li>
+                <li>Procurement, tendering, and purchasing practices must protect taxpayers and prevent avoidable costs.</li>
+                <li>Any exception to normal tendering or purchasing practice should receive careful scrutiny, public explanation, and appropriate documentation.</li>
                 <li>Council must consider immediate costs as well as long-term operating, maintenance, debt, infrastructure, and legal obligations.</li>
                 <li>Decisions should seek to reduce avoidable legal costs and unnecessary taxpayer exposure to financial risk.</li>
-                <li>Council should work with other governments, residents, applicants, and affected parties fairly and openly, seeking practical, lawful, and proportionate resolutions that reduce conflict, financial harm, and mounting legal expenses for taxpayers.</li>
+                <li>Council should publish a clear multi-year capital, reserve, and debt plan showing the full cost, funding source, operating impact, and taxpayer exposure for major projects.</li>
+                <li>Major capital decisions should have transparent budgets, regular public cost-variance reporting, and a clear explanation of funding from taxation, debt, reserves, grants, rates, development charges, or other recoveries.</li>
               </ul>
             </div>
           </article>
 
-          <article class="priority">
+          <article class="priority" id="infrastructure-capacity">
             <div class="number">05</div>
             <div>
               <h2>Infrastructure and municipal capacity</h2>
               <ul>
                 <li>Reliable wastewater, water, roads, drainage, and other core services must be properly planned before growth outpaces municipal capacity.</li>
-                <li>Council must identify capacity constraints early, assess practical alternatives, and understand the lifecycle costs and risks of proposed solutions.</li>
-                <li>Where there are competing demands or limited resources, Council should carefully weigh service needs, affordability, timing, long-term resilience, and impacts on existing residents.</li>
+                <li>Council must identify capacity constraints early, assess practical alternatives, and understand lifecycle costs and risks.</li>
+                <li>Council should carefully weigh service needs, affordability, timing, long-term resilience, and impacts on existing residents.</li>
                 <li>Mark will bring an engineer’s discipline to reviewing infrastructure needs, risks, costs, and options.</li>
                 <li>The municipality should choose durable, evidence-based investments rather than costly short-term fixes.</li>
+                <li>The Municipality must maintain a current, publicly available Asset Management Plan identifying asset condition, service levels, lifecycle costs, funding gaps, risks, and a realistic long-term renewal strategy.</li>
+                <li>Core infrastructure must be funded and maintained before discretionary expansion, with growth-related infrastructure costs recovered fairly from development wherever appropriate.</li>
               </ul>
             </div>
           </article>
 
         </div>
+
+        <aside class="callout">
+          <h2>The issues taxpayers deserve clear answers on</h2>
+          <p>
+            Read how these priorities apply to current financial,
+            infrastructure, growth, and accountability issues in
+            Strathroy-Caradoc.
+            <a href="/elephant-in-the-room.html">View The Elephant in the Room</a>.
+          </p>
+        </aside>
       </div>
     </section>
 
