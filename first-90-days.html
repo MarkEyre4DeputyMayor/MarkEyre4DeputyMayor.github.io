@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>My First 90 Days | Mark Eyre for Deputy Mayor</title>
-  <meta name="description" content="Mark Eyre's practical first 90 days agenda for Strathroy-Caradoc.">
+
+  <meta
+    name="description"
+    content="Mark Eyre's practical first 90 days agenda for Strathroy-Caradoc."
+  >
 
   <style>
     :root {
@@ -14,9 +19,12 @@
       --cream: #f7f4ed;
       --ink: #1d2730;
       --white: #ffffff;
+      --light-blue: #dce9f1;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -32,9 +40,9 @@
     }
 
     header {
-      background: var(--navy);
       color: var(--white);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+      background: var(--navy);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     }
 
     .nav {
@@ -48,19 +56,19 @@
     .brand {
       color: var(--white);
       text-decoration: none;
+      font-size: 1.15rem;
       font-weight: 800;
       line-height: 1.05;
-      font-size: 1.15rem;
-      letter-spacing: .02em;
+      letter-spacing: 0.02em;
     }
 
     .brand span {
       display: block;
-      color: #dce9f1;
-      font-size: .73rem;
-      font-weight: 600;
       margin-top: 5px;
-      letter-spacing: .06em;
+      color: var(--light-blue);
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
@@ -75,7 +83,7 @@
     nav a {
       color: var(--white);
       text-decoration: none;
-      font-size: .9rem;
+      font-size: 0.9rem;
       font-weight: 700;
     }
 
@@ -85,32 +93,36 @@
     }
 
     .hero {
+      padding: 72px 0;
       color: var(--white);
       background: linear-gradient(135deg, #1c4a6a, #12304a);
-      padding: 72px 0;
     }
 
     .eyebrow {
-      color: #f5cf75;
-      text-transform: uppercase;
-      font-size: .82rem;
-      font-weight: 800;
-      letter-spacing: .12em;
       margin: 0 0 14px;
+      color: #f5cf75;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
-    h1, h2, h3 { line-height: 1.15; }
+    h1,
+    h2,
+    h3 {
+      line-height: 1.15;
+    }
 
     h1 {
       margin: 0;
       font-size: clamp(2.7rem, 6vw, 4.8rem);
-      letter-spacing: -.045em;
+      letter-spacing: -0.045em;
     }
 
     .hero p:last-child {
       max-width: 790px;
       margin: 20px 0 0;
-      color: #dce9f1;
+      color: var(--light-blue);
       font-size: 1.15rem;
     }
 
@@ -147,8 +159,8 @@
     }
 
     .action h2 {
-      color: var(--navy);
       margin: 0 0 15px;
+      color: var(--navy);
       font-size: clamp(1.6rem, 3vw, 2.2rem);
     }
 
@@ -177,14 +189,14 @@
       display: block;
       margin-bottom: 4px;
       color: var(--blue);
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      font-size: .82rem;
-      letter-spacing: .06em;
     }
 
     .closing {
-      text-align: center;
       color: var(--white);
+      text-align: center;
       background: var(--navy);
     }
 
@@ -198,7 +210,7 @@
     .closing p {
       max-width: 780px;
       margin: 0 auto;
-      color: #dce9f1;
+      color: var(--light-blue);
       font-size: 1.08rem;
     }
 
@@ -218,10 +230,10 @@
     }
 
     footer {
-      background: #0b1f30;
-      color: #dce9f1;
       padding: 30px 0;
-      font-size: .9rem;
+      color: var(--light-blue);
+      background: #0b1f30;
+      font-size: 0.9rem;
     }
 
     footer p {
@@ -256,17 +268,17 @@
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="/index.html">
+      <a class="brand" href="index.html">
         MARK EYRE
         <span>For Deputy Mayor</span>
       </a>
 
       <nav aria-label="Main navigation">
-        <a href="/index.html">Home</a>
-        <a href="/about.html">About Mark</a>
-        <a href="/priorities.html">Priorities</a>
-        <a class="active" href="/first-90-days.html">First 90 Days</a>
-        <a href="/get-involved.html">Get Involved</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Mark</a>
+        <a href="priorities.html">Priorities</a>
+        <a class="active" href="first-90-days.html">First 90 Days</a>
+        <a href="get-involved.html">Get Involved</a>
       </nav>
     </div>
   </header>
@@ -275,11 +287,14 @@
     <section class="hero">
       <div class="container">
         <p class="eyebrow">My First 90 Days</p>
+
         <h1>Prepared leadership. Clear questions. Practical action.</h1>
+
         <p>
           If elected, Mark will use his first 90 days to become fully briefed
           on the municipality’s major files, ask informed questions, and bring
-          forward practical proposals to Council where collective action is needed.
+          forward practical proposals to Council where collective action is
+          needed.
         </p>
       </div>
     </section>
@@ -288,16 +303,18 @@
       <div class="container">
         <p class="intro">
           Mark’s focus will be transparency, responsible growth, taxpayer
-          protection, and sound long-term infrastructure planning for
-          Strathroy-Caradoc.
+          protection, sound long-term infrastructure planning, and practical
+          cooperation for Strathroy-Caradoc.
         </p>
 
         <div class="action-list">
 
           <article class="action">
             <div class="number">01</div>
+
             <div>
               <h2>Get fully briefed on the major files</h2>
+
               <p>
                 Seek briefings through appropriate municipal channels with the
                 Mayor, CAO, senior staff, and department heads on:
@@ -321,8 +338,10 @@
 
           <article class="action">
             <div class="number">02</div>
+
             <div>
               <h2>Seek clearer Council accountability</h2>
+
               <p>
                 Ask Council to consider a regular, public, plain-language report
                 identifying:
@@ -345,8 +364,10 @@
 
           <article class="action">
             <div class="number">03</div>
+
             <div>
               <h2>Review growth and infrastructure together</h2>
+
               <p>
                 Ask Council to receive a clear review of whether water,
                 wastewater, roads, drainage, and other municipal services are
@@ -364,8 +385,10 @@
 
           <article class="action">
             <div class="number">04</div>
+
             <div>
               <h2>Strengthen taxpayer protection in procurement and spending</h2>
+
               <p>
                 Review the municipality’s procurement policy, tender thresholds,
                 exceptions, and reporting to Council on significant purchases.
@@ -384,19 +407,24 @@
 
           <article class="action">
             <div class="number">05</div>
+
             <div>
               <h2>Work toward practical dispute resolution</h2>
+
               <p>
                 Seek an early briefing, through appropriate channels, on active
                 municipal disputes, litigation, and inter-municipal issues,
-                including costs, risks, and lawful paths toward resolution.
+                including their costs, risks, and lawful paths toward resolution.
+                Where possible, encourage practical cooperation and fair
+                settlement discussions that protect the public interest and
+                reduce avoidable legal costs to taxpayers.
               </p>
 
               <p class="deliverable">
                 <strong>Deliverable</strong>
-                A public-interest approach focused on fairness, openness where
-                legally possible, sound decision-making, and reducing avoidable
-                legal costs to taxpayers.
+                A public-interest approach focused on fairness, cooperation,
+                lawful resolution, and reducing unnecessary legal costs so
+                taxpayer resources can be directed toward community priorities.
               </p>
             </div>
           </article>
@@ -408,13 +436,14 @@
     <section class="closing">
       <div class="container">
         <h2>First-day preparation. Long-term responsibility.</h2>
+
         <p>
-          Mark’s first 90 days will focus on understanding the facts, identifying
-          risks early, improving public accountability, and helping Council make
-          sound decisions for Strathroy-Caradoc’s future.
+          Mark’s first 90 days will focus on understanding the facts,
+          identifying risks early, improving public accountability, and helping
+          Council make sound decisions for Strathroy-Caradoc’s future.
         </p>
 
-        <a class="button" href="/priorities.html">View Mark’s Priorities</a>
+        <a class="button" href="priorities.html">View Mark’s Priorities</a>
       </div>
     </section>
   </main>
