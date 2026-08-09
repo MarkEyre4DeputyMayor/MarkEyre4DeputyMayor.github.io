@@ -11,7 +11,6 @@
       --navy: #12304a;
       --blue: #1f5f86;
       --gold: #d9a63a;
-      --green: #39755b;
       --grey: #68727a;
       --cream: #f7f4ed;
       --pale-blue: #e7f0f5;
@@ -24,6 +23,7 @@
     body {
       margin: 0;
       color: var(--ink);
+      background: var(--white);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.65;
     }
@@ -33,9 +33,7 @@
       margin: 0 auto;
     }
 
-    header,
-    footer,
-    .closing {
+    header, footer, .closing {
       background: var(--navy);
       color: var(--white);
     }
@@ -77,8 +75,7 @@
       font-weight: 700;
     }
 
-    nav a:hover,
-    nav a.active {
+    nav a:hover, nav a.active {
       color: #f5cf75;
     }
 
@@ -101,10 +98,7 @@
       pointer-events: none;
     }
 
-    .hero .container {
-      position: relative;
-      z-index: 1;
-    }
+    .hero .container { position: relative; z-index: 1; }
 
     .eyebrow {
       color: #f5cf75;
@@ -114,9 +108,7 @@
       text-transform: uppercase;
     }
 
-    h1, h2, h3 {
-      line-height: 1.15;
-    }
+    h1, h2, h3 { line-height: 1.15; }
 
     h1 {
       max-width: 830px;
@@ -131,55 +123,44 @@
       font-size: 1.15rem;
     }
 
-    section {
-      padding: 65px 0;
-    }
+    section { padding: 65px 0; }
 
     .lead {
       max-width: 880px;
       font-size: 1.12rem;
     }
 
-    .risk-section {
-      background: var(--cream);
-    }
+    .risk-section { background: var(--cream); }
 
     .risk-section h2,
+    .financial-questions h2,
+    .issues-heading,
     .questions h2 {
       margin: 0 0 14px;
       color: var(--navy);
       font-size: clamp(1.9rem, 4vw, 2.65rem);
     }
 
-    .risk-section > .container > p {
-      max-width: 880px;
-    }
-
     .risk-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 18px;
       margin-top: 30px;
     }
 
     .risk-card {
-      min-height: 245px;
+      min-height: 235px;
       padding: 22px;
       background: var(--white);
       border-top: 7px solid var(--gold);
       box-shadow: 0 2px 8px rgba(0,0,0,.08);
     }
 
-    .risk-card.rate {
-      border-top-color: var(--blue);
-    }
-
-    .risk-card.unknown {
-      border-top-color: var(--grey);
-    }
+    .risk-card.unknown { border-top-color: var(--grey); }
+    .risk-card.rate { border-top-color: var(--blue); }
 
     .risk-card h3 {
-      min-height: 47px;
+      min-height: 45px;
       margin: 0 0 13px;
       color: var(--navy);
       font-size: 1.05rem;
@@ -206,26 +187,23 @@
       font-size: .74rem;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: .04em;
     }
 
-    .rate .label { background: var(--blue); }
     .unknown .label { background: var(--grey); }
+    .rate .label { background: var(--blue); }
 
- .disclaimer {
-  display: block;
-  max-width: 900px;
-  margin: 28px auto 0;
-  padding: 16px 22px;
-  color: var(--white);
-  background: var(--navy);
-  border-left: 7px solid var(--gold);
-  font-size: .94rem;
-}
+    .disclaimer {
+      max-width: 900px;
+      margin: 28px auto 0;
+      padding: 18px 22px;
+      color: var(--white);
+      background: var(--navy);
+      border-left: 7px solid var(--gold);
+      font-size: .94rem;
+    }
 
-.disclaimer p {
-  margin: 0;
-}
+    .disclaimer p { margin: 0; }
+    .disclaimer p + p { margin-top: 12px; }
 
     .legend {
       display: flex;
@@ -244,14 +222,35 @@
     .dot {
       width: 12px;
       height: 12px;
-      display: inline-block;
       border-radius: 50%;
       background: var(--gold);
     }
 
     .dot.rate { background: var(--blue); }
     .dot.unknown { background: var(--grey); }
-    .dot.benefit { background: var(--green); }
+
+    .financial-questions { background: var(--white); }
+
+    .question-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .question-item {
+      padding: 24px;
+      background: var(--pale-blue);
+      border-left: 6px solid var(--blue);
+    }
+
+    .question-item h3 {
+      margin: 0 0 11px;
+      color: var(--navy);
+      font-size: 1.18rem;
+    }
+
+    .question-item p { margin: 0; }
 
     .issues {
       display: grid;
@@ -281,9 +280,7 @@
       font-size: clamp(1.35rem, 2.5vw, 1.8rem);
     }
 
-    .issue p {
-      margin: 0 0 12px;
-    }
+    .issue p { margin: 0 0 12px; }
 
     .priority-link {
       color: var(--navy);
@@ -292,13 +289,7 @@
       text-underline-offset: 3px;
     }
 
-    .priority-link:hover {
-      color: var(--blue);
-    }
-
-    .questions {
-      background: var(--pale-blue);
-    }
+    .questions { background: var(--pale-blue); }
 
     .questions ul {
       max-width: 900px;
@@ -306,9 +297,7 @@
       padding-left: 22px;
     }
 
-    .questions li {
-      margin-bottom: 12px;
-    }
+    .questions li { margin-bottom: 12px; }
 
     .note {
       max-width: 900px;
@@ -316,9 +305,7 @@
       font-size: .94rem;
     }
 
-    .closing {
-      text-align: center;
-    }
+    .closing { text-align: center; }
 
     .closing h2 {
       margin: 0 auto 18px;
@@ -349,12 +336,11 @@
       font-size: .9rem;
     }
 
-    footer p {
-      margin: 6px 0;
-    }
+    footer p { margin: 6px 0; }
 
     @media (max-width: 980px) {
-      .risk-grid {
+      .risk-grid,
+      .question-list {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -366,11 +352,10 @@
         flex-direction: column;
       }
 
-      nav {
-        gap: 12px;
-      }
+      nav { gap: 12px; }
 
-      .risk-grid {
+      .risk-grid,
+      .question-list {
         grid-template-columns: 1fr;
       }
 
@@ -380,9 +365,7 @@
         padding: 24px;
       }
 
-      .risk-card {
-        min-height: 0;
-      }
+      .risk-card { min-height: 0; }
     }
   </style>
 </head>
@@ -434,112 +417,122 @@
       <div class="container">
         <h2>What is at stake?</h2>
         <p>
-          Strathroy-Caradoc’s financial pressures are not all the same.
-          Some affect property taxes, some are paid through utility rates,
-          and others involve debt, grants, development charges, reserves,
-          or unresolved financial information.
+          Strathroy-Caradoc’s financial pressures are not all the same. Some
+          affect property taxes, some are paid through utility rates, and others
+          involve debt, grants, development charges, reserves, or information
+          that has not been publicly reconciled.
         </p>
 
         <div class="risk-grid">
+          <article class="risk-card">
+            <h3>Tax-funded infrastructure gap</h3>
+            <div class="number">$6.3M/year</div>
+            <p>Estimated annual shortfall for roads, buildings, fleet, stormwater, bridges, and culverts.</p>
+            <span class="label">Taxpayer exposure</span>
+          </article>
 
-  <article class="risk-card">
-    <h3>Tax-funded infrastructure gap</h3>
-    <div class="number">$6.3M/year</div>
-    <p>
-      Estimated annual shortfall for tax-funded assets such as roads,
-      buildings, fleet, stormwater, bridges, and culverts.
-    </p>
-    <span class="label">Taxpayer exposure</span>
-  </article>
+          <article class="risk-card">
+            <h3>Overall infrastructure funding gap</h3>
+            <div class="number">$6.5M/year</div>
+            <p>Estimated overall annual gap in the 2021 Asset Management Plan, which requires a current update.</p>
+            <span class="label">Long-term risk</span>
+          </article>
 
-  <article class="risk-card">
-    <h3>Overall infrastructure funding gap</h3>
-    <div class="number">$6.5M/year</div>
-    <p>
-      Estimated overall annual gap in the 2021 Asset Management Plan,
-      which requires a current update and public reconciliation.
-    </p>
-    <span class="label">Long-term risk</span>
-  </article>
+          <article class="risk-card unknown">
+            <h3>Police Annex debt shown in budget material</h3>
+            <div class="number">$9M</div>
+            <p>Residents need a complete financing schedule and the annual debt-service impact on future budgets.</p>
+            <span class="label">Clarity needed</span>
+          </article>
 
-  <article class="risk-card unknown">
-    <h3>Police Annex debt shown in budget material</h3>
-    <div class="number">$9M</div>
-    <p>
-      Documented debt figure. Residents deserve a complete public
-      financing schedule and annual debt-service impact.
-    </p>
-    <span class="label">Financing clarity needed</span>
-  </article>
+          <article class="risk-card">
+            <h3>Roads, drainage, bridges, and culverts</h3>
+            <div class="number">$5.93M</div>
+            <p>2026 capital-program category funded through a mix of grants, reserves, debt, and taxation.</p>
+            <span class="label">Core infrastructure</span>
+          </article>
 
-  <article class="risk-card">
-    <h3>Roads, drainage, bridges, and culverts</h3>
-    <div class="number">$5.93M</div>
-    <p>
-      2026 capital-program category. Funding comes from a mix of
-      grants, reserves, debt, and taxation.
-    </p>
-    <span class="label">Core infrastructure</span>
-  </article>
+          <article class="risk-card rate">
+            <h3>Wastewater upgrade pressure</h3>
+            <div class="number">$25M+</div>
+            <p>Major near-term treatment and compliance work funded largely through rates, DCs, reserves, and debt.</p>
+            <span class="label">Ratepayer exposure</span>
+          </article>
 
-  <article class="risk-card rate">
-    <h3>Wastewater upgrade pressure</h3>
-    <div class="number">$25M+</div>
-    <p>
-      Major near-term treatment and compliance work funded largely
-      through utility rates, development charges, reserves, and debt.
-    </p>
-    <span class="label">Ratepayer exposure</span>
-  </article>
-
-  <article class="risk-card unknown">
-    <h3>Legal and contingent financial risk</h3>
-    <div class="number">Not publicly quantified</div>
-    <p>
-      Public financial statements confirm that the Municipality is involved
-      in legal actions, but residents do not have a clear public risk profile
-      showing the number of matters, potential financial exposure, insurance
-      limits, deductibles, or total annual external legal costs.
-    </p>
-    <span class="label">Taxpayer disclosure needed</span>
-  </article>
-
-</div>
+          <article class="risk-card unknown">
+            <h3>Legal and contingent financial risk</h3>
+            <div class="number">Unquantified</div>
+            <p>Legal actions are disclosed, but taxpayers lack a clear public risk profile of exposure, insurance, deductibles, and annual legal cost.</p>
+            <span class="label">Disclosure needed</span>
+          </article>
+        </div>
 
         <aside class="disclaimer">
           <p>
-            <strong>These figures are not additive.</strong> They represent
-            different types of financial exposure: annual infrastructure gaps,
-            one-time capital costs, debt, tax-supported projects, and
-            rate-funded utility obligations.
+            <strong>These figures show a larger, connected financial risk—but they cannot be added into one reliable total.</strong>
+            Some overlap, such as the tax-funded infrastructure gap within the overall AMP gap and annual roads spending within the broader renewal need.
+          </p>
+          <p>
+            Others use different time periods or funding sources, including property taxes, utility rates, development charges, reserves, grants, and debt. Legal and contingent liabilities may be an additional risk, but no public amount is available to calculate it responsibly.
           </p>
         </aside>
 
         <div class="legend">
           <span><i class="dot"></i> Property-tax or long-term taxpayer exposure</span>
           <span><i class="dot rate"></i> Water/wastewater ratepayer exposure</span>
-          <span><i class="dot unknown"></i> Financing or cost information requiring reconciliation</span>
-          <span><i class="dot benefit"></i> Potential benefit from grants or growth recovery</span>
+          <span><i class="dot unknown"></i> Information requiring public reconciliation or disclosure</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="financial-questions">
+      <div class="container">
+        <h2>What these figures mean</h2>
+
+        <div class="question-list">
+          <article class="question-item">
+            <h3>Infrastructure funding</h3>
+            <p>Council needs a realistic and current plan to renew core assets before deferred work becomes expensive emergency work.</p>
+          </article>
+
+          <article class="question-item">
+            <h3>Asset Management Plan</h3>
+            <p>The Municipality needs an updated AMP that clearly shows asset condition, service levels, lifecycle costs, risks, and a long-term funding strategy.</p>
+          </article>
+
+          <article class="question-item">
+            <h3>Police Annex financing</h3>
+            <p>The announced project amount and documented debt figure do not fully reconcile. One complete project budget should show total cost, debt, reserves, grants, taxation, and annual debt service.</p>
+          </article>
+
+          <article class="question-item">
+            <h3>Roads and reserves</h3>
+            <p>Residents need to know what is funded by grants, reserves, debt, and taxation—and how negative or depleted reserves will be rebuilt.</p>
+          </article>
+
+          <article class="question-item">
+            <h3>Wastewater costs</h3>
+            <p>Residents need clear forecasts of rate increases, project costs, debt, compliance deadlines, and growth-related cost recovery.</p>
+          </article>
+
+          <article class="question-item">
+            <h3>Legal risk disclosure</h3>
+            <p>Residents do not need confidential legal strategy, but they deserve basic aggregate disclosure of active matters, insurance protection where possible, deductibles, and annual external legal spending.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <h2>Issues taxpayers deserve clear answers on</h2>
+        <h2 class="issues-heading">Issues taxpayers deserve clear answers on</h2>
 
         <div class="issues">
-
           <article class="issue">
             <div class="issue-number">01</div>
             <div>
               <h2>A current infrastructure plan is overdue</h2>
-              <p>
-                The Municipality needs a current Asset Management Plan showing
-                asset condition, service levels, lifecycle costs, risks, and
-                long-term funding needs for roads, bridges, drainage, buildings,
-                fleet, water, wastewater, and stormwater.
-              </p>
+              <p>The Municipality needs a current Asset Management Plan showing condition, service levels, lifecycle costs, risks, and long-term funding needs.</p>
               <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#infrastructure-capacity">Infrastructure and municipal capacity</a> and <a class="priority-link" href="/priorities.html#financial-responsibility">Financial responsibility and taxpayer protection</a>.</p>
             </div>
           </article>
@@ -548,11 +541,7 @@
             <div class="issue-number">02</div>
             <div>
               <h2>Major projects need complete financing disclosure</h2>
-              <p>
-                Before taxpayers are committed to major capital projects, Council
-                should publish total cost, scope, debt, reserves, grants,
-                operating costs, debt-service impact, and contingency.
-              </p>
+              <p>Before taxpayers are committed, Council should publish total cost, scope, debt, reserves, grants, operating cost, annual debt service, and contingency.</p>
               <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#transparent-government">Transparent and accountable government</a> and <a class="priority-link" href="/priorities.html#financial-responsibility">Financial responsibility and taxpayer protection</a>.</p>
             </div>
           </article>
@@ -561,12 +550,7 @@
             <div class="issue-number">03</div>
             <div>
               <h2>Legal and contingent financial risks need responsible reporting</h2>
-              <p>
-                Litigation, planning appeals, insurance deductibles, and other
-                contingent liabilities can create sudden financial pressure.
-                Council should report aggregate legal-risk information as openly
-                as the law permits.
-              </p>
+              <p>Public financial statements disclose legal actions but do not provide a clear aggregate public risk profile. Council should report what it can without compromising legal privilege.</p>
               <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#transparent-government">Transparent and accountable government</a> and <a class="priority-link" href="/priorities.html#financial-responsibility">Financial responsibility and taxpayer protection</a>.</p>
             </div>
           </article>
@@ -575,11 +559,7 @@
             <div class="issue-number">04</div>
             <div>
               <h2>Tax increases need a clear long-term explanation</h2>
-              <p>
-                Residents deserve to know not only what a tax increase funds
-                today, but what it means for future reserves, debt,
-                maintenance obligations, service levels, and affordability.
-              </p>
+              <p>Residents deserve to know what current tax decisions mean for future reserves, debt, maintenance obligations, service levels, and affordability.</p>
               <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#financial-responsibility">Financial responsibility and taxpayer protection</a>.</p>
             </div>
           </article>
@@ -587,12 +567,8 @@
           <article class="issue">
             <div class="issue-number">05</div>
             <div>
-              <h2>Roads, bridges, drainage, and stormwater need sustained renewal</h2>
-              <p>
-                Safe roads, bridges, culverts, sidewalks, and drainage systems
-                require a clear long-term renewal program. Deferring maintenance
-                can turn manageable work into expensive reconstruction.
-              </p>
+              <h2>Water and wastewater compliance must be costed openly</h2>
+              <p>Residents need clear project, financing, construction, rate-impact, debt, and development-charge reporting for essential water and wastewater work.</p>
               <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#infrastructure-capacity">Infrastructure and municipal capacity</a>.</p>
             </div>
           </article>
@@ -600,94 +576,11 @@
           <article class="issue">
             <div class="issue-number">06</div>
             <div>
-              <h2>Water and wastewater compliance must be costed openly</h2>
-              <p>
-                Residents need clear reporting on water and wastewater projects,
-                financing, construction schedules, utility-rate impacts,
-                development-charge recovery, and the risks of delayed work.
-              </p>
-              <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#infrastructure-capacity">Infrastructure and municipal capacity</a> and <a class="priority-link" href="/priorities.html#financial-responsibility">Financial responsibility and taxpayer protection</a>.</p>
+              <h2>Growth must pay its fair share</h2>
+              <p>Housing and employment growth should be matched by planning, servicing, infrastructure, staffing, and a fair financing plan—not create an unfunded burden for existing residents.</p>
+              <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#responsible-planning">Responsible planning and land-use decisions</a>, <a class="priority-link" href="/priorities.html#agriculture-rural">Protecting agriculture and rural interests</a>, and <a class="priority-link" href="/priorities.html#infrastructure-capacity">Infrastructure and municipal capacity</a>.</p>
             </div>
           </article>
-
-          <article class="issue">
-            <div class="issue-number">07</div>
-            <div>
-              <h2>Service changes and user fees require value-for-money scrutiny</h2>
-              <p>
-                Changes to waste collection, green-bin services, user fees, or
-                contracted services should be explained in plain language,
-                including cost, service standard, alternatives, and benefits.
-              </p>
-              <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#financial-responsibility">Financial responsibility and taxpayer protection</a> and <a class="priority-link" href="/priorities.html#transparent-government">Transparent and accountable government</a>.</p>
-            </div>
-          </article>
-
-          <article class="issue">
-            <div class="issue-number">08</div>
-            <div>
-              <h2>Community-facility investments need a lifecycle plan</h2>
-              <p>
-                Arenas, parks, fields, and municipal facilities should show
-                their full lifecycle cost, operating impact, funding source,
-                condition need, and priority relative to core services.
-              </p>
-              <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#financial-responsibility">Financial responsibility and taxpayer protection</a> and <a class="priority-link" href="/priorities.html#infrastructure-capacity">Infrastructure and municipal capacity</a>.</p>
-            </div>
-          </article>
-
-          <article class="issue">
-            <div class="issue-number">09</div>
-            <div>
-              <h2>Intermunicipal servicing needs a fair and durable agreement</h2>
-              <p>
-                Shared water, wastewater, stormwater, and growth-related
-                servicing arrangements must be transparent, lawful,
-                financially fair, and durable.
-              </p>
-              <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#transparent-government">Transparent government</a>, <a class="priority-link" href="/priorities.html#financial-responsibility">Taxpayer protection</a>, and <a class="priority-link" href="/priorities.html#infrastructure-capacity">Infrastructure capacity</a>.</p>
-            </div>
-          </article>
-
-          <article class="issue">
-            <div class="issue-number">10</div>
-            <div>
-              <h2>Housing funding and growth commitments must be achievable</h2>
-              <p>
-                External housing funding can benefit the Municipality, but
-                commitments must be matched by realistic planning, servicing,
-                infrastructure, staffing, and financial capacity.
-              </p>
-              <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#responsible-planning">Responsible planning and land-use decisions</a>, <a class="priority-link" href="/priorities.html#financial-responsibility">Taxpayer protection</a>, and <a class="priority-link" href="/priorities.html#infrastructure-capacity">Infrastructure capacity</a>.</p>
-            </div>
-          </article>
-
-          <article class="issue">
-            <div class="issue-number">11</div>
-            <div>
-              <h2>Municipal capacity and project management matter</h2>
-              <p>
-                Strong Council decisions require reliable staff capacity, clear
-                communication, disciplined project management, and timely public reporting.
-              </p>
-              <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#transparent-government">Transparent and accountable government</a> and <a class="priority-link" href="/priorities.html#infrastructure-capacity">Infrastructure and municipal capacity</a>.</p>
-            </div>
-          </article>
-
-          <article class="issue">
-            <div class="issue-number">12</div>
-            <div>
-              <h2>Employment-land growth must protect taxpayers, farms, and rural communities</h2>
-              <p>
-                Commercial and industrial development can strengthen the tax base,
-                but only when infrastructure costs are recovered fairly and
-                decisions respect agricultural land, rural roads, drainage, and
-                servicing capacity.
-              </p>
-              <p><strong>My priority:</strong> <a class="priority-link" href="/priorities.html#responsible-planning">Responsible planning</a>, <a class="priority-link" href="/priorities.html#agriculture-rural">Protecting agriculture and rural interests</a>, and <a class="priority-link" href="/priorities.html#infrastructure-capacity">Infrastructure capacity</a>.</p>
-            </div>
-          </article>
-
         </div>
       </div>
     </section>
@@ -697,7 +590,7 @@
         <h2>Questions Council should answer publicly</h2>
         <ul>
           <li>When will Council receive and approve a current Asset Management Plan?</li>
-          <li>What is the full financing, debt-service, reserve, and operating-cost impact of each major capital project?</li>
+          <li>What is the complete financing, debt-service, reserve, and operating-cost impact of each major project?</li>
           <li>What are the current reserve balances, which reserves are in deficit, and what is the repayment plan?</li>
           <li>How will wastewater compliance, expansion, and debt affect future utility rates?</li>
           <li>How will Council ensure new growth pays a fair share of the infrastructure it requires?</li>
@@ -709,12 +602,7 @@
     <section>
       <div class="container">
         <p class="note">
-          This page summarizes policy and accountability questions drawn from
-          publicly available municipal budgets, plans, reports, meeting materials,
-          and financial disclosures. It is not a finding of legal liability or an
-          allegation of wrongdoing by any individual. Financial figures, project
-          costs, reserve balances, and legal matters should be read with their
-          source dates, scope, and stated limitations in mind.
+          This page summarizes policy and accountability questions drawn from publicly available municipal budgets, plans, reports, meeting materials, and financial disclosures. It is not a finding of legal liability or an allegation of wrongdoing by any individual. Financial figures, project costs, reserve balances, and legal matters should be read with their source dates, scope, and stated limitations in mind.
         </p>
       </div>
     </section>
@@ -722,12 +610,7 @@
     <section class="closing">
       <div class="container">
         <h2>Clear facts. Responsible decisions. Long-term value.</h2>
-        <p>
-          Strathroy-Caradoc needs Council leadership that reads the material,
-          asks necessary questions, protects taxpayers, and plans for the full
-          cost of today’s decisions.
-        </p>
-
+        <p>Strathroy-Caradoc needs Council leadership that reads the material, asks necessary questions, protects taxpayers, and plans for the full cost of today’s decisions.</p>
         <a class="button" href="/priorities.html">Read Mark’s Priorities</a>
       </div>
     </section>
