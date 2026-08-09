@@ -16,9 +16,9 @@
       --white: #ffffff;
     }
 
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -77,7 +77,7 @@
     nav a {
       color: var(--white);
       text-decoration: none;
-      font-size: .92rem;
+      font-size: .9rem;
       font-weight: 700;
     }
 
@@ -87,8 +87,8 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, #1c4a6a, #12304a);
       color: var(--white);
+      background: linear-gradient(135deg, #1c4a6a, #12304a);
       padding: 72px 0;
     }
 
@@ -101,11 +101,13 @@
       margin: 0 0 14px;
     }
 
-    h1, h2, h3 { line-height: 1.15; }
+    h1, h2 {
+      line-height: 1.15;
+    }
 
     h1 {
-      font-size: clamp(2.6rem, 6vw, 4.8rem);
       margin: 0;
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
       letter-spacing: -.045em;
     }
 
@@ -116,7 +118,9 @@
       font-size: 1.15rem;
     }
 
-    section { padding: 66px 0; }
+    section {
+      padding: 66px 0;
+    }
 
     .content {
       max-width: 800px;
@@ -124,7 +128,9 @@
       font-size: 1.08rem;
     }
 
-    .content p { margin: 0 0 22px; }
+    .content p {
+      margin: 0 0 22px;
+    }
 
     .credentials {
       display: grid;
@@ -145,9 +151,9 @@
     .credential span {
       display: block;
       margin-top: 4px;
+      color: var(--ink);
       font-size: .86rem;
       font-weight: 600;
-      color: var(--ink);
     }
 
     .quote-section {
@@ -166,7 +172,7 @@
 
     .button {
       display: inline-block;
-      margin-top: 12px;
+      margin-top: 24px;
       padding: 13px 21px;
       color: #182633;
       background: var(--gold);
@@ -175,7 +181,9 @@
       font-weight: 800;
     }
 
-    .button:hover { background: #efc15b; }
+    .button:hover {
+      background: #efc15b;
+    }
 
     footer {
       background: #0b1f30;
@@ -184,7 +192,9 @@
       font-size: .9rem;
     }
 
-    footer p { margin: 6px 0; }
+    footer p {
+      margin: 6px 0;
+    }
 
     @media (max-width: 760px) {
       .nav {
@@ -198,9 +208,13 @@
         gap: 12px;
       }
 
-      .credentials { grid-template-columns: 1fr; }
+      .credentials {
+        grid-template-columns: 1fr;
+      }
 
-      section { padding: 52px 0; }
+      section {
+        padding: 52px 0;
+      }
     }
   </style>
 </head>
@@ -208,16 +222,17 @@
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="index.html">
+      <a class="brand" href="/index.html">
         MARK EYRE
         <span>For Deputy Mayor</span>
       </a>
 
       <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a class="active" href="about.html">About Mark</a>
-        <a href="priorities.html">Priorities</a>
-        <a href="index.html#involved">Get Involved</a>
+        <a href="/index.html">Home</a>
+        <a class="active" href="/about.html">About Mark</a>
+        <a href="/priorities.html">Priorities</a>
+        <a href="/first-90-days.html">First 90 Days</a>
+        <a href="/get-involved.html">Get Involved</a>
       </nav>
     </div>
   </header>
@@ -298,7 +313,7 @@
           sound long-term decisions ahead of political convenience.”
         </blockquote>
 
-        <a class="button" href="priorities.html">View Mark’s Priorities</a>
+        <a class="button" href="/priorities.html">View Mark’s Priorities</a>
       </div>
     </section>
   </main>
