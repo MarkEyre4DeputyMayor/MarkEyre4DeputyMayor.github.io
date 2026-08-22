@@ -13,23 +13,31 @@
 
   <style>
     :root {
-      --navy: #12304a;
-      --blue: #1f5f86;
-      --gold: #d9a63a;
-      --cream: #f7f4ed;
-      --ink: #1d2730;
-      --white: #ffffff;
-      --light-blue: #dce9f1;
+      --forest: #173F35;
+      --evergreen: #0E2D25;
+      --sage: #5E7F70;
+      --gold: #B8872B;
+      --gold-light: #D9B65D;
+      --ivory: #F8F5ED;
+      --pale-gold: #EEE3C8;
+      --stone: #C9CFC5;
+      --ink: #24352F;
+      --white: #FFFFFF;
+      --supporting-text: #40534B;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       color: var(--ink);
-      background: var(--white);
+      background: var(--ivory);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.65;
     }
@@ -40,13 +48,14 @@
     }
 
     header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--navy);
-  color: var(--white);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
-}
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--ivory);
+      color: var(--forest);
+      border-bottom: 3px solid var(--gold);
+      box-shadow: 0 2px 10px rgba(14, 45, 37, 0.12);
+    }
 
     .nav {
       min-height: 74px;
@@ -57,21 +66,21 @@
     }
 
     .brand {
-      color: var(--white);
+      color: var(--forest);
       text-decoration: none;
-      font-size: 1.15rem;
+      font-size: 1.3rem;
       font-weight: 800;
       line-height: 1.05;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.03em;
     }
 
     .brand span {
       display: block;
       margin-top: 5px;
-      color: var(--light-blue);
-      font-size: 0.73rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      color: var(--sage);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
@@ -84,7 +93,7 @@
     }
 
     nav a {
-      color: var(--white);
+      color: var(--forest);
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 700;
@@ -92,18 +101,27 @@
 
     nav a:hover,
     nav a.active {
-      color: #f5cf75;
+      color: var(--gold);
+    }
+
+    nav a:focus-visible,
+    .button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
     }
 
     .hero {
       padding: 72px 0;
-      color: var(--white);
-      background: linear-gradient(135deg, #1c4a6a, #12304a);
+      color: var(--forest);
+      background:
+        linear-gradient(135deg, rgba(248, 245, 237, 0.98), rgba(238, 227, 200, 0.92)),
+        var(--ivory);
+      border-bottom: 1px solid var(--stone);
     }
 
     .eyebrow {
       margin: 0 0 14px;
-      color: #f5cf75;
+      color: var(--gold);
       font-size: 0.82rem;
       font-weight: 800;
       letter-spacing: 0.12em;
@@ -118,6 +136,7 @@
 
     h1 {
       margin: 0;
+      color: var(--forest);
       font-size: clamp(2.7rem, 6vw, 4.8rem);
       letter-spacing: -0.045em;
     }
@@ -125,7 +144,7 @@
     .hero p:last-child {
       max-width: 790px;
       margin: 20px 0 0;
-      color: var(--light-blue);
+      color: var(--supporting-text);
       font-size: 1.15rem;
     }
 
@@ -133,9 +152,14 @@
       padding: 68px 0;
     }
 
+    .actions-section {
+      background: var(--ivory);
+    }
+
     .intro {
       max-width: 840px;
       margin: 0;
+      color: var(--supporting-text);
       font-size: 1.1rem;
     }
 
@@ -150,12 +174,14 @@
       grid-template-columns: 100px 1fr;
       gap: 28px;
       padding: 32px;
-      background: var(--cream);
+      background: var(--white);
+      border: 1px solid var(--stone);
       border-left: 7px solid var(--gold);
+      box-shadow: 0 6px 18px rgba(14, 45, 37, 0.07);
     }
 
     .number {
-      color: var(--blue);
+      color: var(--forest);
       font-size: 3.2rem;
       font-weight: 800;
       line-height: 1;
@@ -163,12 +189,13 @@
 
     .action h2 {
       margin: 0 0 15px;
-      color: var(--navy);
+      color: var(--forest);
       font-size: clamp(1.6rem, 3vw, 2.2rem);
     }
 
     .action p {
       margin: 0 0 13px;
+      color: var(--ink);
     }
 
     .action ul {
@@ -183,15 +210,15 @@
     .deliverable {
       margin-top: 22px !important;
       padding: 16px 18px;
-      color: var(--navy);
-      background: var(--white);
-      border-left: 4px solid var(--blue);
+      color: var(--forest);
+      background: var(--pale-gold);
+      border-left: 4px solid var(--forest);
     }
 
     .deliverable strong {
       display: block;
       margin-bottom: 4px;
-      color: var(--blue);
+      color: var(--forest);
       font-size: 0.82rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -200,7 +227,7 @@
     .closing {
       color: var(--white);
       text-align: center;
-      background: var(--navy);
+      background: var(--evergreen);
     }
 
     .closing h2 {
@@ -213,7 +240,7 @@
     .closing p {
       max-width: 780px;
       margin: 0 auto;
-      color: var(--light-blue);
+      color: #DCE9E1;
       font-size: 1.08rem;
     }
 
@@ -221,21 +248,25 @@
       display: inline-block;
       margin-top: 26px;
       padding: 13px 21px;
-      color: #182633;
+      color: var(--evergreen);
       background: var(--gold);
+      border: 2px solid var(--gold);
       border-radius: 3px;
       text-decoration: none;
       font-weight: 800;
     }
 
     .button:hover {
-      background: #efc15b;
+      color: var(--evergreen);
+      background: var(--gold-light);
+      border-color: var(--gold-light);
     }
 
     footer {
       padding: 30px 0;
-      color: var(--light-blue);
-      background: #0b1f30;
+      color: #DCE9E1;
+      background: var(--evergreen);
+      border-top: 1px solid rgba(220, 233, 225, 0.18);
       font-size: 0.9rem;
     }
 
@@ -261,6 +292,10 @@
         padding: 25px;
       }
 
+      .number {
+        font-size: 2.6rem;
+      }
+
       section {
         padding: 52px 0;
       }
@@ -271,17 +306,17 @@
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="/index.html">
-  MARK EYRE
-  <span>For Deputy Mayor of Strathroy-Caradoc</span>
-</a>
+      <a class="brand" href="index.html">
+        MARK EYRE
+        <span>For Deputy Mayor of Strathroy-Caradoc</span>
+      </a>
 
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About Mark</a>
         <a href="priorities.html">Priorities</a>
-        <a href="/elephant-in-the-room.html">The Issues</a>
-        <a class="active" href="first-90-days.html">First 90 Days</a>
+        <a href="elephant-in-the-room.html">The Issues</a>
+        <a class="active" aria-current="page" href="first-90-days.html">First 90 Days</a>
         <a href="get-involved.html">Contact Mark</a>
       </nav>
     </div>
@@ -303,7 +338,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="actions-section">
       <div class="container">
         <p class="intro">
           Mark’s focus will be transparency, responsible growth, taxpayer
@@ -312,12 +347,11 @@
         </p>
 
         <div class="action-list">
-
           <article class="action">
             <div class="number">01</div>
 
             <div>
-              <h2>Get fully briefed on the major files</h2>
+              <h2>Get Fully Briefed on the Major Files</h2>
 
               <p>
                 Seek briefings through appropriate municipal channels with the
@@ -344,7 +378,7 @@
             <div class="number">02</div>
 
             <div>
-              <h2>Seek clearer Council accountability</h2>
+              <h2>Seek Clearer Council Accountability</h2>
 
               <p>
                 Ask Council to consider a regular, public, plain-language report
@@ -370,7 +404,7 @@
             <div class="number">03</div>
 
             <div>
-              <h2>Review growth and infrastructure together</h2>
+              <h2>Review Growth and Infrastructure Together</h2>
 
               <p>
                 Ask Council to receive a clear review of whether water,
@@ -391,7 +425,7 @@
             <div class="number">04</div>
 
             <div>
-              <h2>Strengthen taxpayer protection in procurement and spending</h2>
+              <h2>Strengthen Taxpayer Protection in Procurement and Spending</h2>
 
               <p>
                 Review the municipality’s procurement policy, tender thresholds,
@@ -413,7 +447,7 @@
             <div class="number">05</div>
 
             <div>
-              <h2>Work toward practical dispute resolution</h2>
+              <h2>Work Toward Practical Dispute Resolution</h2>
 
               <p>
                 Seek an early briefing, through appropriate channels, on active
@@ -432,14 +466,13 @@
               </p>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
     <section class="closing">
       <div class="container">
-        <h2>First-day preparation. Long-term responsibility.</h2>
+        <h2>First-Day Preparation. Long-Term Responsibility.</h2>
 
         <p>
           Mark’s first 90 days will focus on understanding the facts,
