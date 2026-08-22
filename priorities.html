@@ -3,24 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>Priorities | Mark Eyre for Deputy Mayor</title>
-  <meta name="description" content="Mark Eyre's priorities for Strathroy-Caradoc: accountable government, responsible planning, agriculture, taxpayer value, and infrastructure.">
+
+  <meta
+    name="description"
+    content="Mark Eyre's priorities for Strathroy-Caradoc: accountable government, responsible planning, agriculture, taxpayer value, and infrastructure."
+  >
 
   <style>
     :root {
-      --navy: #12304a;
-      --blue: #1f5f86;
-      --gold: #d9a63a;
-      --cream: #f7f4ed;
-      --ink: #1d2730;
-      --white: #ffffff;
+      --forest: #173F35;
+      --evergreen: #0E2D25;
+      --sage: #5E7F70;
+      --gold: #B8872B;
+      --gold-light: #D9B65D;
+      --ivory: #F8F5ED;
+      --pale-gold: #EEE3C8;
+      --stone: #C9CFC5;
+      --ink: #24352F;
+      --white: #FFFFFF;
+      --supporting-text: #40534B;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       color: var(--ink);
+      background: var(--ivory);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.65;
     }
@@ -31,19 +48,14 @@
     }
 
     header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--navy);
-  color: var(--white);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
-}
-
-.closing {
-  color: var(--white);
-  background: var(--navy);
-  text-align: center;
-}
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--ivory);
+      color: var(--forest);
+      border-bottom: 3px solid var(--gold);
+      box-shadow: 0 2px 10px rgba(14, 45, 37, 0.12);
+    }
 
     .nav {
       min-height: 74px;
@@ -54,18 +66,21 @@
     }
 
     .brand {
-      color: var(--white);
+      color: var(--forest);
       text-decoration: none;
-      font-size: 1.15rem;
+      font-size: 1.3rem;
       font-weight: 800;
       line-height: 1.05;
+      letter-spacing: 0.03em;
     }
 
     .brand span {
       display: block;
       margin-top: 5px;
-      color: #dce9f1;
-      font-size: .73rem;
+      color: var(--sage);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
@@ -73,31 +88,43 @@
       display: flex;
       flex-wrap: wrap;
       gap: 17px;
+      justify-content: flex-end;
     }
 
     nav a {
-      color: var(--white);
+      color: var(--forest);
       text-decoration: none;
-      font-size: .9rem;
+      font-size: 0.9rem;
       font-weight: 700;
     }
 
     nav a:hover,
     nav a.active {
-      color: #f5cf75;
+      color: var(--gold);
+    }
+
+    nav a:focus-visible,
+    .button:focus-visible,
+    .callout a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
     }
 
     .hero {
       padding: 72px 0;
-      color: var(--white);
-      background: linear-gradient(135deg, #1c4a6a, var(--navy));
+      color: var(--forest);
+      background:
+        linear-gradient(135deg, rgba(248, 245, 237, 0.98), rgba(238, 227, 200, 0.92)),
+        var(--ivory);
+      border-bottom: 1px solid var(--stone);
     }
 
     .eyebrow {
-      color: #f5cf75;
-      font-size: .82rem;
+      margin: 0 0 14px;
+      color: var(--gold);
+      font-size: 0.82rem;
       font-weight: 800;
-      letter-spacing: .12em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
@@ -108,13 +135,15 @@
 
     h1 {
       margin: 0;
+      color: var(--forest);
       font-size: clamp(2.7rem, 6vw, 4.8rem);
-      letter-spacing: -.045em;
+      letter-spacing: -0.045em;
     }
 
     .hero p:last-child {
       max-width: 790px;
-      color: #dce9f1;
+      margin: 21px 0 0;
+      color: var(--supporting-text);
       font-size: 1.15rem;
     }
 
@@ -122,8 +151,14 @@
       padding: 65px 0;
     }
 
+    .priorities-content {
+      background: var(--ivory);
+    }
+
     .intro {
       max-width: 800px;
+      margin: 0;
+      color: var(--supporting-text);
       font-size: 1.1rem;
     }
 
@@ -138,13 +173,15 @@
       grid-template-columns: 100px 1fr;
       gap: 28px;
       padding: 32px;
-      background: var(--cream);
+      background: var(--white);
+      border: 1px solid var(--stone);
       border-left: 7px solid var(--gold);
-      scroll-margin-top: 24px;
+      box-shadow: 0 6px 18px rgba(14, 45, 37, 0.07);
+      scroll-margin-top: 105px;
     }
 
     .number {
-      color: var(--blue);
+      color: var(--forest);
       font-size: 3.2rem;
       font-weight: 800;
       line-height: 1;
@@ -152,7 +189,7 @@
 
     .priority h2 {
       margin: 0 0 16px;
-      color: var(--navy);
+      color: var(--forest);
       font-size: clamp(1.6rem, 3vw, 2.2rem);
     }
 
@@ -163,49 +200,80 @@
 
     .priority li {
       margin-bottom: 11px;
+      color: var(--ink);
     }
 
     .callout {
       margin-top: 38px;
       padding: 26px 30px;
-      background: #e7f0f5;
-      border-left: 7px solid var(--blue);
+      background: var(--pale-gold);
+      border-left: 7px solid var(--gold);
     }
 
     .callout h2 {
       margin: 0 0 10px;
-      color: var(--navy);
+      color: var(--forest);
+    }
+
+    .callout p {
+      margin: 0;
+      color: var(--supporting-text);
+    }
+
+    .callout a {
+      color: var(--forest);
+      font-weight: 800;
+    }
+
+    .callout a:hover {
+      color: var(--evergreen);
+    }
+
+    .closing {
+      color: var(--white);
+      background: var(--evergreen);
+      text-align: center;
     }
 
     .closing h2 {
+      max-width: 880px;
       margin: 0 auto 18px;
+      color: var(--white);
       font-size: clamp(1.8rem, 4vw, 2.7rem);
     }
 
     .closing p {
-  max-width: 780px;
-  margin: 0 auto;
-  color: var(--white);
-  font-size: 1.08rem;
-}
+      max-width: 780px;
+      margin: 0 auto;
+      color: #DCE9E1;
+      font-size: 1.08rem;
+    }
 
     .button {
       display: inline-block;
       margin-top: 26px;
       padding: 13px 21px;
-      color: #182633;
+      color: var(--evergreen);
       background: var(--gold);
+      border: 2px solid var(--gold);
       border-radius: 3px;
       text-decoration: none;
       font-weight: 800;
     }
 
+    .button:hover {
+      color: var(--evergreen);
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
     footer {
-  padding: 30px 0;
-  color: var(--white);
-  background: #0b1f30;
-  font-size: .9rem;
-}
+      padding: 30px 0;
+      color: #DCE9E1;
+      background: var(--evergreen);
+      border-top: 1px solid rgba(220, 233, 225, 0.18);
+      font-size: 0.9rem;
+    }
 
     footer p {
       margin: 6px 0;
@@ -220,12 +288,17 @@
 
       nav {
         gap: 12px;
+        justify-content: flex-start;
       }
 
       .priority {
         grid-template-columns: 1fr;
         gap: 14px;
         padding: 25px;
+      }
+
+      .number {
+        font-size: 2.6rem;
       }
     }
   </style>
@@ -234,18 +307,18 @@
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="/index.html">
-  MARK EYRE
-  <span>For Deputy Mayor of Strathroy-Caradoc</span>
-</a>
+      <a class="brand" href="index.html">
+        MARK EYRE
+        <span>For Deputy Mayor of Strathroy-Caradoc</span>
+      </a>
 
       <nav aria-label="Main navigation">
-        <a href="/index.html">Home</a>
-        <a href="/about.html">About Mark</a>
-        <a class="active" aria-current="page" href="/priorities.html">Priorities</a>
-        <a href="/elephant-in-the-room.html">The Issues</a>
-        <a href="/first-90-days.html">First 90 Days</a>
-        <a href="/get-involved.html">Contact Mark</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Mark</a>
+        <a class="active" aria-current="page" href="priorities.html">Priorities</a>
+        <a href="elephant-in-the-room.html">The Issues</a>
+        <a href="first-90-days.html">First 90 Days</a>
+        <a href="get-involved.html">Contact Mark</a>
       </nav>
     </div>
   </header>
@@ -254,7 +327,9 @@
     <section class="hero">
       <div class="container">
         <p class="eyebrow">Mark Eyre's Priorities</p>
+
         <h1>Practical leadership for Strathroy-Caradoc.</h1>
+
         <p>
           Mark’s priorities are grounded in responsible local government,
           fair process, long-term thinking, and respect for the people who
@@ -263,7 +338,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="priorities-content">
       <div class="container">
         <p class="intro">
           The Deputy Mayor must be prepared to study the material, listen to
@@ -272,11 +347,10 @@
         </p>
 
         <div class="priority-list">
-
           <article class="priority" id="transparent-government">
             <div class="number">01</div>
             <div>
-              <h2>Transparent and accountable government</h2>
+              <h2>Transparent and Accountable Government</h2>
               <ul>
                 <li>Council decisions should be open, well explained, and based on the public record.</li>
                 <li>Residents deserve meaningful opportunities to be heard, without unnecessary procedural barriers.</li>
@@ -290,7 +364,7 @@
           <article class="priority" id="responsible-planning">
             <div class="number">02</div>
             <div>
-              <h2>Responsible planning and land-use decisions</h2>
+              <h2>Responsible Planning and Land-Use Decisions</h2>
               <ul>
                 <li>Major land-use decisions must be grounded in planning rules, Official Plan policy, evidence, servicing capacity, and the long-term public interest—not predetermined outcomes or political pressure.</li>
                 <li>Council should consider staff reports, public input, applicable legislation, planning policy, servicing information, and the full record.</li>
@@ -304,7 +378,7 @@
           <article class="priority" id="agriculture-rural">
             <div class="number">03</div>
             <div>
-              <h2>Protecting agriculture and rural interests</h2>
+              <h2>Protecting Agriculture and Rural Interests</h2>
               <ul>
                 <li>Agricultural land and rural communities are essential to Strathroy-Caradoc’s identity, economy, and future.</li>
                 <li>Council must understand development, traffic, servicing, drainage, and land-use impacts on farms and rural residents.</li>
@@ -318,7 +392,7 @@
           <article class="priority" id="financial-responsibility">
             <div class="number">04</div>
             <div>
-              <h2>Financial responsibility and taxpayer protection</h2>
+              <h2>Financial Responsibility and Taxpayer Protection</h2>
               <ul>
                 <li>Every municipal dollar should be spent carefully, transparently, and with clear public value.</li>
                 <li>Procurement, tendering, and purchasing practices must protect taxpayers and prevent avoidable costs.</li>
@@ -334,7 +408,7 @@
           <article class="priority" id="infrastructure-capacity">
             <div class="number">05</div>
             <div>
-              <h2>Infrastructure and municipal capacity</h2>
+              <h2>Infrastructure and Municipal Capacity</h2>
               <ul>
                 <li>Reliable wastewater, water, roads, drainage, and other core services must be properly planned before growth outpaces municipal capacity.</li>
                 <li>Council must identify capacity constraints early, assess practical alternatives, and understand lifecycle costs and risks.</li>
@@ -346,16 +420,15 @@
               </ul>
             </div>
           </article>
-
         </div>
 
         <aside class="callout">
-          <h2>The issues taxpayers deserve clear answers on</h2>
+          <h2>The Issues Taxpayers Deserve Clear Answers On</h2>
           <p>
             Read how these priorities apply to current financial,
             infrastructure, growth, and accountability issues in
             Strathroy-Caradoc.
-            <a href="/elephant-in-the-room.html">View The Elephant in the Room</a>.
+            <a href="elephant-in-the-room.html">View The Elephant in the Room</a>.
           </p>
         </aside>
       </div>
@@ -363,14 +436,15 @@
 
     <section class="closing">
       <div class="container">
-        <h2>Prepared leadership. Clear judgment. Decisions built for the long term.</h2>
+        <h2>Prepared Leadership. Clear Judgment. Decisions Built for the Long Term.</h2>
+
         <p>
           Mark Eyre is running for Deputy Mayor because Strathroy-Caradoc needs
           leadership that reads the material, respects the rules, asks difficult
           questions, and puts sound long-term decisions ahead of political convenience.
         </p>
 
-        <a class="button" href="/get-involved.html">Get Involved</a>
+        <a class="button" href="get-involved.html">Get Involved</a>
       </div>
     </section>
   </main>
