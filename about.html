@@ -8,28 +8,36 @@
 
   <meta
     name="description"
-    content="Learn about Mark Eyre, candidate for Deputy Mayor of Strathroy-Caradoc."
+    content="Learn about Mark Eyre, candidate for Deputy Mayor of Strathroy-Caradoc: a retired Professional Engineer, farm owner, and experienced municipal advocate."
   >
 
   <style>
     :root {
-      --navy: #12304a;
-      --blue: #1f5f86;
-      --gold: #d9a63a;
-      --cream: #f7f4ed;
-      --ink: #1d2730;
-      --white: #ffffff;
-      --light-blue: #dce9f1;
+      --forest: #173F35;
+      --evergreen: #0E2D25;
+      --sage: #5E7F70;
+      --gold: #B8872B;
+      --gold-light: #D9B65D;
+      --ivory: #F8F5ED;
+      --pale-gold: #EEE3C8;
+      --stone: #C9CFC5;
+      --ink: #24352F;
+      --white: #FFFFFF;
+      --supporting-text: #40534B;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       color: var(--ink);
-      background: var(--white);
+      background: var(--ivory);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
@@ -40,13 +48,14 @@
     }
 
     header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--navy);
-  color: var(--white);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
-}
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--ivory);
+      color: var(--forest);
+      border-bottom: 3px solid var(--gold);
+      box-shadow: 0 2px 10px rgba(14, 45, 37, 0.12);
+    }
 
     .nav {
       min-height: 74px;
@@ -57,21 +66,21 @@
     }
 
     .brand {
-      color: var(--white);
+      color: var(--forest);
       text-decoration: none;
-      font-size: 1.15rem;
+      font-size: 1.3rem;
       font-weight: 800;
       line-height: 1.05;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.03em;
     }
 
     .brand span {
       display: block;
       margin-top: 5px;
-      color: var(--light-blue);
-      font-size: 0.73rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      color: var(--sage);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
@@ -84,7 +93,7 @@
     }
 
     nav a {
-      color: var(--white);
+      color: var(--forest);
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 700;
@@ -92,18 +101,27 @@
 
     nav a:hover,
     nav a.active {
-      color: #f5cf75;
+      color: var(--gold);
+    }
+
+    nav a:focus-visible,
+    .button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
     }
 
     .hero {
       padding: 74px 0;
-      color: var(--white);
-      background: linear-gradient(135deg, #1c4a6a, #12304a);
+      color: var(--forest);
+      background:
+        linear-gradient(135deg, rgba(248, 245, 237, 0.98), rgba(238, 227, 200, 0.92)),
+        var(--ivory);
+      border-bottom: 1px solid var(--stone);
     }
 
     .eyebrow {
       margin: 0 0 14px;
-      color: #f5cf75;
+      color: var(--gold);
       font-size: 0.82rem;
       font-weight: 800;
       letter-spacing: 0.12em;
@@ -119,6 +137,7 @@
     h1 {
       max-width: 850px;
       margin: 0;
+      color: var(--forest);
       font-size: clamp(2.7rem, 6vw, 4.8rem);
       letter-spacing: -0.045em;
     }
@@ -126,12 +145,16 @@
     .hero p:last-child {
       max-width: 760px;
       margin: 21px 0 0;
-      color: var(--light-blue);
+      color: var(--supporting-text);
       font-size: 1.15rem;
     }
 
     section {
       padding: 70px 0;
+    }
+
+    .bio {
+      background: var(--white);
     }
 
     .bio-layout {
@@ -143,20 +166,22 @@
 
     .bio h2 {
       margin: 0 0 22px;
-      color: var(--navy);
+      color: var(--forest);
       font-size: clamp(2rem, 4vw, 3rem);
     }
 
     .bio p {
       margin: 0 0 22px;
+      color: var(--ink);
       font-size: 1.06rem;
     }
 
     .qualification-box {
       padding: 31px;
       color: var(--white);
-      background: var(--blue);
+      background: var(--forest);
       border-top: 7px solid var(--gold);
+      box-shadow: 0 12px 28px rgba(14, 45, 37, 0.16);
     }
 
     .qualification-box h2 {
@@ -172,12 +197,12 @@
 
     .qualification-box li {
       margin-bottom: 13px;
-      color: #edf5f9;
+      color: #E6F0E9;
     }
 
     .focus {
       color: var(--white);
-      background: var(--navy);
+      background: var(--evergreen);
     }
 
     .focus h2 {
@@ -191,7 +216,7 @@
     .focus-intro {
       max-width: 780px;
       margin: 0 auto 36px;
-      color: var(--light-blue);
+      color: #DCE9E1;
       text-align: center;
       font-size: 1.08rem;
     }
@@ -207,55 +232,61 @@
       color: var(--ink);
       background: var(--white);
       border-left: 5px solid var(--gold);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
     }
 
     .focus-card h3 {
       margin: 0 0 12px;
-      color: var(--blue);
+      color: var(--forest);
       font-size: 1.3rem;
     }
 
     .focus-card p {
       margin: 0;
+      color: var(--supporting-text);
     }
 
     .button {
       display: inline-block;
       margin-top: 29px;
       padding: 13px 21px;
-      color: #182633;
-      background: var(--gold);
+      color: var(--white);
+      background: var(--forest);
+      border: 2px solid var(--forest);
       border-radius: 3px;
       text-decoration: none;
       font-weight: 800;
     }
 
     .button:hover {
-      background: #efc15b;
+      color: var(--white);
+      background: var(--evergreen);
+      border-color: var(--evergreen);
     }
 
     .next-step {
       text-align: center;
-      background: var(--cream);
+      background: var(--pale-gold);
     }
 
     .next-step h2 {
       max-width: 760px;
       margin: 0 auto 16px;
-      color: var(--navy);
+      color: var(--forest);
       font-size: clamp(2rem, 4vw, 3rem);
     }
 
     .next-step p {
       max-width: 730px;
       margin: 0 auto;
+      color: var(--supporting-text);
       font-size: 1.08rem;
     }
 
     footer {
       padding: 30px 0;
-      color: var(--light-blue);
-      background: #0b1f30;
+      color: #DCE9E1;
+      background: var(--evergreen);
       font-size: 0.9rem;
     }
 
@@ -296,16 +327,16 @@
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="/index.html">
-  MARK EYRE
-  <span>For Deputy Mayor of Strathroy-Caradoc</span>
-</a>
+      <a class="brand" href="index.html">
+        MARK EYRE
+        <span>For Deputy Mayor of Strathroy-Caradoc</span>
+      </a>
 
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a class="active" href="about.html">About Mark</a>
+        <a class="active" aria-current="page" href="about.html">About Mark</a>
         <a href="priorities.html">Priorities</a>
-        <a href="/elephant-in-the-room.html">The Issues</a>
+        <a href="elephant-in-the-room.html">The Issues</a>
         <a href="first-90-days.html">First 90 Days</a>
         <a href="get-involved.html">Contact Mark</a>
       </nav>
@@ -314,41 +345,37 @@
 
   <main>
     <section class="hero">
-  <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 42px; flex-wrap: wrap;">
+      <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 42px; flex-wrap: wrap;">
 
-    <div style="flex: 1 1 520px;">
-      <p class="eyebrow">About Mark</p>
+        <div style="flex: 1 1 520px;">
+          <p class="eyebrow">About Mark</p>
 
-      <h1>Practical experience. Independent judgment. Local commitment.</h1>
+          <h1>Practical experience. Independent judgment. Local commitment.</h1>
 
-      <p>
-        Mark Eyre is running for Deputy Mayor to bring clear questions,
-        responsible planning, and respect for taxpayers to Strathroy-Caradoc
-        Council.
-      </p>
-    </div>
+          <p>
+            Mark Eyre is running for Deputy Mayor to bring clear questions,
+            responsible planning, and respect for taxpayers to Strathroy-Caradoc
+            Council.
+          </p>
+        </div>
 
-    <div style="flex: 0 1 360px; text-align: center;">
-      <img
-        src="mark-eyre-campaign-2026.jpeg"
-        alt="Mark Eyre, candidate for Deputy Mayor of Strathroy-Caradoc"
-        style="width: 280px; height: 450px; object-fit: cover; object-position: center top; display: block; margin: 0 auto; border: 5px solid #ffffff; border-radius: 12px; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
-        "
-      >
+        <div style="flex: 0 1 360px; text-align: center;">
+          <img
+            src="mark-eyre-campaign-2026.jpeg"
+            alt="Mark Eyre, candidate for Deputy Mayor of Strathroy-Caradoc"
+            style="width: 280px; height: 450px; object-fit: cover; object-position: center top; display: block; margin: 0 auto; border: 5px solid #ffffff; border-radius: 12px; box-shadow: 0 12px 28px rgba(14, 45, 37, 0.22);"
+          >
 
-     
+          <p style="margin: 10px auto 0; max-width: 360px; text-align: center; font-size: 0.75rem; line-height: 1.3; color: #40534B;">
+            AI-assisted illustrative image of Mark
+          </p>
+        </div>
+      </div>
+    </section>
 
-      <p style="margin: 10px auto 0; max-width: 360px; text-align: center; font-size: 0.75rem; line-height: 1.3; color: #5f6b76;">
-  AI-assisted illustrative image of Mark
-</p>
-    </div>
-
-  </div>
-</section>
-
-    <section>
+    <section class="bio">
       <div class="container bio-layout">
-        <div class="bio">
+        <div>
           <h2>Experience that matters for municipal decisions.</h2>
 
           <p>
@@ -427,8 +454,6 @@
             <li>Former Strathroy-Caradoc Youth Hockey coach.</li>
             <li>Former business mentor with The Prince’s Trust, now The King’s Trust.</li>
           </ul>
-
-        
         </aside>
       </div>
     </section>
@@ -493,5 +518,4 @@
     </div>
   </footer>
 </body>
-  
 </html>
