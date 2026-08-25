@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+F<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -104,8 +104,9 @@
       color: var(--gold);
     }
 
-    nav a:focus-visible,
+        nav a:focus-visible,
     .button:focus-visible,
+    .contribution-button:focus-visible,
     .notice a:focus-visible {
       outline: 3px solid var(--gold);
       outline-offset: 3px;
@@ -189,7 +190,46 @@
     .notice a:hover {
       color: var(--evergreen);
     }
+    .contribution-cta {
+      margin-top: 38px;
+    }
 
+    .contribution-button {
+      display: block;
+      width: 100%;
+      padding: 20px 24px;
+      color: var(--white);
+      background: var(--gold);
+      border: 3px solid var(--gold);
+      border-radius: 3px;
+      box-shadow: 0 6px 18px rgba(14, 45, 37, 0.14);
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .contribution-button:hover {
+      color: var(--white);
+      background: var(--forest);
+      border-color: var(--forest);
+    }
+
+    .contribution-button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .contribution-caption {
+      max-width: 760px;
+      margin: 12px auto 0;
+      color: var(--supporting-text);
+      font-size: 0.95rem;
+      text-align: center;
+    }
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -357,7 +397,21 @@
             <a href="mailto:MarkEyre4DeputyMayor@proton.me">MarkEyre4DeputyMayor@proton.me</a>
           </p>
         </div>
+        <div class="contribution-cta">
+          <a
+            class="contribution-button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdgOcu7wZ-Ym4duNFRG1dwX5igFh_iun8hdMBxTlOLD2fC5fA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contribute to Mark’s Campaign
+          </a>
 
+          <p class="contribution-caption">
+            Complete the contribution information form first. Interac e-Transfer
+            instructions will follow after review of your completed form.
+          </p>
+        </div>
         <div class="cards">
           <article class="card">
             <h2>Volunteer</h2>
