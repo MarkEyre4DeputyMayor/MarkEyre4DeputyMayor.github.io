@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Middlesex Banner: Five Questions | Mark Eyre for Deputy Mayor
+  </title>
+
+  <meta
+    name="description"
+    content="Read Mark Eyre’s complete responses to the Middlesex Banner’s five candidate questions: background, reasons for running, Council decisions, municipal priorities and fair representation."
+  >
+
+  <style>
+    :root {
+      --forest: #173F35;
+      --evergreen: #0E2D25;
+      --sage: #5E7F70;
+      --gold: #B8872B;
+      --gold-light: #D9B65D;
+      --ivory: #F8F5ED;
+      --pale-gold: #EEE3C8;
+      --stone: #C9CFC5;
+      --ink: #24352F;
+      --white: #FFFFFF;
+      --supporting-text: #40534B;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--ivory);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--ivory);
+      color: var(--forest);
+      border-bottom: 3px solid var(--gold);
+      box-shadow: 0 2px 10px rgba(14, 45, 37, 0.12);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 0;
+    }
+
+    .brand {
+      flex-shrink: 0;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: 0.03em;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 5px;
+      color: var(--sage);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 12px 17px;
+    }
+
+    nav a {
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 16px;
+      z-index: 2000;
+      padding: 10px 16px;
+      color: var(--white);
+      background: var(--evergreen);
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .page-hero {
+      padding: 64px 0 54px;
+      color: var(--forest);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(248, 245, 237, 0.98),
+          rgba(238, 227, 200, 0.92)
+        ),
+        var(--ivory);
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .page-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 15px;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      color: var(--forest);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      letter-spacing: -0.035em;
+    }
+
+    .page-intro {
+      margin: 0 0 18px;
+      color: var(--supporting-text);
+      font-size: 1.12rem;
+    }
+
+    .candidate-line {
+      margin: 24px 0 0;
+      color: var(--forest);
+      font-weight: 800;
+    }
+
+    .campaign-tagline {
+      margin: 8px 0 0;
+      color: var(--gold);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 42px 0 64px;
+    }
+
+    .question-menu {
+      margin-bottom: 38px;
+      padding: 28px 32px;
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-left: 6px solid var(--gold);
+      box-shadow: 0 6px 18px rgba(14, 45, 37, 0.06);
+    }
+
+    .question-menu h2 {
+      margin: 0 0 16px;
+      color: var(--forest);
+      font-size: 1.45rem;
+    }
+
+    .question-menu ol {
+      margin: 0;
+      padding-left: 24px;
+    }
+
+    .question-menu li {
+      padding: 5px 0;
+    }
+
+    .question-menu a {
+      color: var(--forest);
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    .question-menu a:hover {
+      color: var(--evergreen);
+      text-decoration-thickness: 2px;
+    }
+
+    .answer-card {
+      margin-bottom: 28px;
+      padding: 34px 38px;
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-top: 5px solid var(--gold);
+      box-shadow: 0 6px 18px rgba(14, 45, 37, 0.06);
+      scroll-margin-top: 160px;
+    }
+
+    .question-number {
+      margin: 0 0 12px;
+      color: var(--sage);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .answer-card h2 {
+      margin: 0 0 24px;
+      color: var(--forest);
+      font-size: clamp(1.4rem, 3vw, 1.85rem);
+    }
+
+    .answer-card p {
+      margin: 0 0 18px;
+      font-size: 1.06rem;
+    }
+
+    .answer-card .question-number {
+      font-size: 0.8rem;
+    }
+
+    .answer-card .back-link {
+      margin: 25px 0 0;
+      font-size: 0.9rem;
+    }
+
+    .back-link a {
+      color: var(--forest);
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    .explore {
+      margin-top: 42px;
+      padding: 34px 38px;
+      color: var(--white);
+      background: var(--evergreen);
+      border-left: 6px solid var(--gold);
+    }
+
+    .explore h2 {
+      margin: 0 0 16px;
+      color: var(--white);
+      font-size: 1.8rem;
+    }
+
+    .explore p {
+      margin: 0 0 24px;
+      color: #DCE9E1;
+      font-size: 1.06rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border: 2px solid var(--gold);
+      border-radius: 3px;
+      color: var(--evergreen);
+      background: var(--gold-light);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button:hover {
+      color: var(--evergreen);
+      background: var(--ivory);
+      border-color: var(--ivory);
+    }
+
+    .button-outline {
+      color: var(--white);
+      background: transparent;
+      border-color: var(--gold-light);
+    }
+
+    .button-outline:hover {
+      color: var(--evergreen);
+      background: var(--ivory);
+      border-color: var(--ivory);
+    }
+
+    footer {
+      padding: 30px 0;
+      color: #DCE9E1;
+      background: var(--evergreen);
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    footer a {
+      color: inherit;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    footer a:hover {
+      color: var(--gold-light);
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+      }
+
+      nav {
+        justify-content: flex-start;
+        gap: 10px 14px;
+      }
+
+      .answer-card {
+        scroll-margin-top: 220px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-hero {
+        padding: 42px 0 36px;
+      }
+
+      .content {
+        padding: 28px 0 42px;
+      }
+
+      .question-menu,
+      .answer-card,
+      .explore {
+        padding: 24px 20px;
+      }
+
+      .answer-card p,
+      .page-intro {
+        font-size: 1rem;
+      }
+
+      .button-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        MARK EYRE
+        <span>For Deputy Mayor of Strathroy-Caradoc</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Mark</a>
+        <a href="priorities.html">Priorities</a>
+        <a href="elephant-in-the-room.html">The Issues</a>
+        <a href="first-90-days.html">First 90 Days</a>
+        <a
+          class="active"
+          aria-current="page"
+          href="banner-5-questions.html"
+        >Banner: 5 Questions</a>
+        <a href="get-involved.html">Contact Mark</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero-inner">
+          <p class="eyebrow">
+            The Middlesex Banner candidate questionnaire
+          </p>
+
+          <h1 id="page-title">
+            My Full Answers to the Middlesex Banner
+          </h1>
+
+          <p class="page-intro">
+            The Middlesex Banner asked candidates five questions about their
+            background, reasons for running, Council’s work, municipal
+            priorities and fair representation.
+          </p>
+
+          <p class="page-intro">
+            Below are my complete responses as submitted. I’m sharing them
+            here so residents can read the detail behind my priorities and
+            the approach I would bring to the role of Deputy Mayor.
+          </p>
+
+          <p class="candidate-line">
+            Mark Eyre — Candidate for Deputy Mayor, Strathroy-Caradoc
+          </p>
+
+          <p class="campaign-tagline">
+            Ask the right questions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="content">
+
+        <aside
+          class="question-menu"
+          id="questions"
+          aria-labelledby="question-menu-title"
+          style="scroll-margin-top: 220px;"
+        >
+          <h2 id="question-menu-title">
+            Read all five answers—or jump to a question
+          </h2>
+
+          <ol>
+            <li>
+              <a href="#question-1">
+                My background and connection to Strathroy-Caradoc
+              </a>
+            </li>
+            <li>
+              <a href="#question-2">
+                Why I’m running for Deputy Mayor
+              </a>
+            </li>
+            <li>
+              <a href="#question-3">
+                What Council does well—and what I would change
+              </a>
+            </li>
+            <li>
+              <a href="#question-4">
+                My priorities for the municipality
+              </a>
+            </li>
+            <li>
+              <a href="#question-5">
+                Fair representation for every community
+              </a>
+            </li>
+          </ol>
+        </aside>
+
+        <article
+          class="answer-card"
+          id="question-1"
+          aria-labelledby="question-1-title"
+        >
+          <p class="question-number">Question 1 of 5</p>
+
+          <h2 id="question-1-title">
+            Could you briefly introduce yourself, your background,
+            and your connection to Strathroy-Caradoc?
+          </h2>
+
+          <p>
+            I am a retired Professional Engineer, currently non-practising,
+            with an Executive MBA from the University of Bath in England
+            and experience in business, engineering, water and wastewater
+            projects, infrastructure optimization, regulatory planning,
+            leadership, consulting and financial services.
+          </p>
+
+          <p>
+            I moved to Strathroy in 2009 after returning to Canada with my
+            family. I own a hobby farm on Walkers Drive providing a direct
+            connection to rural, agricultural and land-use issues. I coached
+            youth hockey locally for a season.
+          </p>
+
+          <p>
+            In the past year I have spent considerable time reviewing
+            municipal planning, governance and public-participation matters.
+            Through that work I have learned how decisions made at Council
+            affect residents, taxpayers and the future of our communities.
+          </p>
+
+          <p>
+            I am running to bring practical experience, independent judgment,
+            careful preparation and the time needed to serve
+            Strathroy-Caradoc effectively.
+          </p>
+
+          <p class="back-link">
+            <a href="#questions">Back to the five questions ↑</a>
+          </p>
+        </article>
+
+        <article
+          class="answer-card"
+          id="question-2"
+          aria-labelledby="question-2-title"
+        >
+          <p class="question-number">Question 2 of 5</p>
+
+          <h2 id="question-2-title">
+            Why are you running for Deputy Mayor,
+            and what would you bring to the role?
+          </h2>
+
+          <p>
+            I am running because I believe I can be a better and more
+            effective Deputy Mayor. I would not ask residents for their
+            support if I did not believe that.
+          </p>
+
+          <p>
+            My experience with a local planning application showed me how
+            important careful, independent review has become. Provincial
+            changes now prevent most ordinary residents and neighbours
+            from appealing approved Official Plan and zoning amendments,
+            even when they participated in the process. For many people,
+            Council is effectively their last meaningful decision point.
+          </p>
+
+          <p>
+            As Deputy Mayor, I would have a vote both locally and at
+            Middlesex County, and I would use that responsibility to examine
+            the evidence, test proposals against planning policy and ensure
+            residents’ concerns receive a fair hearing.
+          </p>
+
+          <p>
+            I will not promise a particular vote before reviewing a file.
+            I will promise preparation, independence and the courage to
+            ask difficult questions—especially when an ordinary resident
+            has no practical appeal route.
+          </p>
+
+          <p class="back-link">
+            <a href="#questions">Back to the five questions ↑</a>
+          </p>
+        </article>
+
+        <article
+          class="answer-card"
+          id="question-3"
+          aria-labelledby="question-3-title"
+        >
+          <p class="question-number">Question 3 of 5</p>
+
+          <h2 id="question-3-title">
+            What do you believe Strathroy-Caradoc Council is doing well,
+            and what would you like to see done differently?
+          </h2>
+
+          <p>
+            Council does important work supporting community organizations
+            and advancing infrastructure. I would work with Council to
+            improve how we use our decision-making time.
+          </p>
+
+          <p>
+            The Legion’s proposed downtown memorial crosswalk illustrates
+            the issue. A relatively straightforward request with a clear
+            cost estimate went to Council, then to staff, back to Council
+            and then to an advisory committee before returning again.
+          </p>
+
+          <p>
+            I would have supported its approval at a safe location within
+            the quoted budget.
+          </p>
+
+          <p>
+            Council should make straightforward decisions once, provide
+            clear direction to staff and reserve repeated scrutiny for
+            matters involving greater cost, risk or long-term consequences.
+          </p>
+
+          <p>
+            I would also ask staff to work with local Legion representatives
+            and other communities to identify appropriate memorial
+            opportunities within municipal jurisdiction.
+          </p>
+
+          <p>
+            We need a Council that works together, is deliberate and rigorous
+            when the stakes are high, but decisive and efficient when the
+            answer is straightforward.
+          </p>
+
+          <p class="back-link">
+            <a href="#questions">Back to the five questions ↑</a>
+          </p>
+        </article>
+
+        <article
+          class="answer-card"
+          id="question-4"
+          aria-labelledby="question-4-title"
+        >
+          <p class="question-number">Question 4 of 5</p>
+
+          <h2 id="question-4-title">
+            What are the most important issues facing Strathroy-Caradoc,
+            and what would your priorities be if elected?
+          </h2>
+
+          <p>
+            The most important challenge is managing growth without allowing
+            infrastructure needs and long-term costs to outpace the
+            municipality’s capacity.
+          </p>
+
+          <p>
+            My priorities would be reliable water, wastewater, roads and
+            drainage; responsible land-use planning; protection of
+            agricultural land and rural interests; and clear financial
+            oversight of major projects.
+          </p>
+
+          <p>
+            Strathroy-Caradoc needs a current, publicly available
+            asset-management plan that identifies the condition of municipal
+            assets, service levels, lifecycle costs, funding gaps and risks.
+          </p>
+
+          <p>
+            Growth should proceed where servicing capacity is demonstrated
+            and where development pays a fair share of the infrastructure
+            it requires.
+          </p>
+
+          <p>
+            Council must also publish understandable information about
+            project costs, financing, debt, reserves and future operating
+            impacts before making major commitments.
+          </p>
+
+          <p>
+            I would bring an engineer’s discipline to these decisions:
+            identify the facts, test assumptions, compare practical options
+            and consider the long-term consequences for residents and
+            taxpayers before voting.
+          </p>
+
+          <p class="back-link">
+            <a href="#questions">Back to the five questions ↑</a>
+          </p>
+        </article>
+
+        <article
+          class="answer-card"
+          id="question-5"
+          aria-labelledby="question-5-title"
+        >
+          <p class="question-number">Question 5 of 5</p>
+
+          <h2 id="question-5-title">
+            How would you ensure that the municipality’s communities
+            are fairly represented at Council?
+          </h2>
+
+          <p>
+            I took some time to look more closely at the different needs
+            across our municipality.
+          </p>
+
+          <p>
+            Melbourne has municipal water but no municipal sewage system,
+            which limits its growth. Rural residents face different issues,
+            including gravel roads, drainage and access to services.
+            Mount Brydges is growing quickly and faces significant water,
+            wastewater and recreation decisions. Strathroy must manage
+            continued growth, downtown renewal and major water, wastewater
+            and transportation needs.
+          </p>
+
+          <p>
+            Fair representation cannot mean responding only to the voices
+            heard most often or promising every community the same thing.
+            It means understanding the evidence and setting priorities using
+            clear, consistent criteria.
+          </p>
+
+          <p>
+            As Deputy Mayor, I would meet regularly with residents throughout
+            the four-year term and remain close to local needs.
+          </p>
+
+          <p>
+            Different communities have different needs, but every resident
+            should expect the same level of attention, transparency and
+            accountability from Council.
+          </p>
+
+          <p class="back-link">
+            <a href="#questions">Back to the five questions ↑</a>
+          </p>
+        </article>
+
+        <section class="explore" aria-labelledby="explore-title">
+          <h2 id="explore-title">
+            Explore my priorities and approach
+          </h2>
+
+          <p>
+            These answers explain the experience, priorities and independent
+            judgment I would bring to the role of Deputy Mayor. You can
+            also read more about my campaign priorities, the issues facing
+            our municipality and my first 90 days plan.
+          </p>
+
+          <div class="button-row">
+            <a class="button" href="priorities.html">
+              Read My Priorities
+            </a>
+
+            <a
+              class="button button-outline"
+              href="elephant-in-the-room.html"
+            >
+              Explore the Issues
+            </a>
+
+            <a
+              class="button button-outline"
+              href="first-90-days.html"
+            >
+              My First 90 Days
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <strong>Mark Eyre for Deputy Mayor</strong>
+        | Strathroy-Caradoc
+      </p>
+
+      <p>Ask the right questions.</p>
+
+      <p>
+        Email:
+        <a href="mailto:markeyre4deputymayor@proton.me">
+          markeyre4deputymayor@proton.me
+        </a>
+      </p>
+
+      <p>
+        Phone:
+        <a href="tel:+15195206315">519-520-6315</a>
+      </p>
+
+      <p>Authorised by Mark Eyre Campaign.</p>
+    </div>
+  </footer>
+</body>
+</html>
