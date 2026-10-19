@@ -104,8 +104,7 @@
       color: var(--gold);
     }
 
-    nav a:focus-visible,
-    .button:focus-visible {
+    a:focus-visible {
       outline: 3px solid var(--gold);
       outline-offset: 3px;
     }
@@ -116,9 +115,42 @@
       padding: 94px 0 88px;
       color: var(--forest);
       background:
-        linear-gradient(135deg, rgba(248, 245, 237, 0.98), rgba(238, 227, 200, 0.92)),
+        linear-gradient(
+          135deg,
+          rgba(248, 245, 237, 0.98),
+          rgba(238, 227, 200, 0.92)
+        ),
         var(--ivory);
       border-bottom: 1px solid var(--stone);
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-copy {
+      min-width: 0;
+    }
+
+    .hero-portrait {
+      width: 100%;
+      max-width: 340px;
+      margin: 0;
+      justify-self: end;
+    }
+
+    .hero-portrait img {
+      display: block;
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      object-position: center 20%;
+      border: 3px solid var(--gold);
+      border-radius: 8px;
+      box-shadow: 0 12px 28px rgba(14, 45, 37, 0.18);
     }
 
     .eyebrow {
@@ -144,15 +176,17 @@
       letter-spacing: -0.065em;
       line-height: 0.95;
     }
-.campaign-tagline {
-  margin: 0.85rem 0 1.35rem;
-  color: var(--gold);
-  font-size: clamp(1rem, 2.2vw, 1.3rem);
-  font-weight: 800;
-  letter-spacing: 0.11em;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
+
+    .campaign-tagline {
+      margin: 0.85rem 0 1.35rem;
+      color: var(--gold);
+      font-size: clamp(1rem, 2.2vw, 1.3rem);
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
     .office {
       margin: 15px 0 0;
       color: var(--sage);
@@ -384,6 +418,32 @@
       margin: 6px 0;
     }
 
+    footer a {
+      color: inherit;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    footer a:hover {
+      color: var(--gold-light);
+    }
+
+    @media (max-width: 900px) {
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero-portrait {
+        justify-self: center;
+        max-width: 320px;
+      }
+
+      .hero-portrait img {
+        height: 430px;
+      }
+    }
+
     @media (max-width: 820px) {
       .about-grid,
       .first-90-grid,
@@ -416,6 +476,16 @@
         padding: 55px 0;
       }
     }
+
+    @media (max-width: 480px) {
+      .hero-portrait {
+        max-width: 280px;
+      }
+
+      .hero-portrait img {
+        height: 380px;
+      }
+    }
   </style>
 </head>
 
@@ -440,28 +510,57 @@
 
   <main>
     <section class="hero">
-      <div class="container">
+      <div class="container hero-layout">
 
-        <div style="flex: 1 1 520px;">
+        <div class="hero-copy">
           <p class="eyebrow">Strathroy-Caradoc</p>
 
           <h1 class="candidate-name">Mark Eyre</h1>
 
-         <p class="office">For Deputy Mayor of Strathroy-Caradoc</p>
+          <p class="office">
+            For Deputy Mayor of Strathroy-Caradoc
+          </p>
 
-<p class="hero-message">
-  Practical leadership. Sound planning. Clear decisions for the long term.
-</p>
+          <p class="hero-message">
+            Practical leadership. Sound planning.
+            Clear decisions for the long term.
+          </p>
 
-<p class="campaign-tagline">
-  ASK THE RIGHT QUESTIONS.
-</p>
+          <p class="campaign-tagline">
+            ASK THE RIGHT QUESTIONS.
+          </p>
+
           <div class="hero-buttons">
-            <a class="button" href="priorities.html">Mark’s Priorities</a>
-            <a class="button button-outline" href="elephant-in-the-room.html">The Issues</a>
-            <a class="button button-outline" href="get-involved.html">Get Involved</a>
+            <a class="button" href="priorities.html">
+              Mark’s Priorities
+            </a>
+
+            <a
+              class="button button-outline"
+              href="elephant-in-the-room.html"
+            >
+              The Issues
+            </a>
+
+            <a
+              class="button button-outline"
+              href="get-involved.html"
+            >
+              Get Involved
+            </a>
           </div>
-        </div>  
+        </div>
+
+        <figure class="hero-portrait">
+          <img
+            src="mark-eyre-campaign-2026.jpg"
+            alt="Mark Eyre, candidate for Deputy Mayor of Strathroy-Caradoc"
+            width="704"
+            height="1514"
+            fetchpriority="high"
+          >
+        </figure>
+
       </div>
     </section>
 
@@ -500,9 +599,13 @@
 
     <section class="priorities">
       <div class="container">
-        <p class="eyebrow" style="text-align: center;">Campaign Priorities</p>
+        <p class="eyebrow" style="text-align: center;">
+          Campaign Priorities
+        </p>
 
-        <h2 class="section-title">A practical agenda for Strathroy-Caradoc.</h2>
+        <h2 class="section-title">
+          A practical agenda for Strathroy-Caradoc.
+        </h2>
 
         <p class="section-intro">
           Mark is committed to practical ideas that support responsible growth,
@@ -555,7 +658,9 @@
             practical action by Council.
           </p>
 
-          <a class="button" href="first-90-days.html">View the First 90 Days Plan</a>
+          <a class="button" href="first-90-days.html">
+            View the First 90 Days Plan
+          </a>
         </div>
 
         <ul class="first-90-list">
@@ -572,22 +677,44 @@
       <div class="container">
         <p class="eyebrow">Get Involved</p>
 
-        <h2 class="section-title">Help build a stronger Strathroy-Caradoc.</h2>
+        <h2 class="section-title">
+          Help build a stronger Strathroy-Caradoc.
+        </h2>
 
         <p>
           Stay informed, share your ideas, volunteer your time, or connect with
           the campaign. Your voice matters.
         </p>
 
-        <a class="button" href="get-involved.html">Connect With the Campaign</a>
+        <a class="button" href="get-involved.html">
+          Connect With the Campaign
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p><strong>Mark Eyre for Deputy Mayor</strong> | Strathroy-Caradoc</p>
-      <p>Authorized by the Mark Eyre campaign.</p>
+      <p>
+        <strong>Mark Eyre for Deputy Mayor</strong>
+        | Strathroy-Caradoc
+      </p>
+
+      <p>Ask the right questions.</p>
+
+      <p>
+        Email:
+        <a href="mailto:markeyre4deputymayor@proton.me">
+          markeyre4deputymayor@proton.me
+        </a>
+      </p>
+
+      <p>
+        Phone:
+        <a href="tel:+15195206315">519-520-6315</a>
+      </p>
+
+      <p>Authorised by Mark Eyre Campaign.</p>
     </div>
   </footer>
 </body>
